@@ -14,36 +14,36 @@ These rules apply to every task and override default behavior. They work togethe
 
 ```tsx
 // ❌ Bad
-<MyButton>Lưu</MyButton>
+<button className='btn'>Lưu</button>
 toast.error('Có lỗi xảy ra')
 
 // ✅ Good
 const { translate } = useLanguage()
-<MyButton>{translate('common.save')}</MyButton>
+<button className='btn'>{translate('common.save')}</button>
 toast.error(translate('common.error'))
 ```
 
 ## 2. Never hardcode names/values — always go through constants
 
 - Do NOT write raw string/number literals for keys, names, or config values directly in components, hooks, or services. Define them in `constants/` (or `config/` for site/API/image config) and import them.
-- This covers: React Query keys, cookie/localStorage keys, status/enum values, routes/paths, API endpoints, tool/agent names, limits/sizes/page sizes, colors, external URLs, regex patterns, timeouts.
+- This covers: React Query keys, cookie/localStorage keys, status/enum values, routes/paths, API endpoints, model/theme names, limits/sizes/page sizes, prices, colors, external URLs, regex patterns, timeouts.
 - Reuse existing constants first:
   - `constants/reactQuery.ts` — `QUERY_KEYS`, `PAGE_SIZE`
   - `constants/cookies.ts` — `COOKIES_KEY`
-  - `constants/app.ts` — `SITE_CONFIG`, `INFO_CONTACT`, `COLORS`, `ORDER_STATUS`, limits (`MAX_*`)
-  - `constants/tools.ts` — `TOOL_NAME`, agent names
-  - `config/` — `baseApi.ts`, `images.ts`, `seo.ts`, `firebase.ts`
+  - `constants/app.ts` — `SITE_CONFIG`, `ROUTES`, `QUERY_PARAM`, enums (`THEME_KEY`, `PAGE_STATUS`, `MODEL_TIER`, `WALLET_TX_TYPE`…), limits (`MAX_*`, `MIN_*`), prices/durations (`TOPUP_AMOUNTS`, `LINK_DURATIONS`)
+  - `constants/themes.ts` — `THEMES` (tokens of the 7 themes), `themeCssVars`
+  - `config/` — `baseApi.ts`, `images.ts`, `cloudinary.ts`
 - If no suitable constant exists, add it to the matching file in `constants/` (ask first — see rule 4).
 
 ```ts
 // ❌ Bad
-useQuery({ queryKey: ['getListBlogs', page] })
-if (order.status === 'PENDING') { ... }
+useQuery({ queryKey: ['getMyPages', page] })
+if (page.status === 'EXPIRED') { ... }
 Cookies.get('accessToken')
 
 // ✅ Good
-useQuery({ queryKey: [QUERY_KEYS.getListBlogs, page] })
-if (order.status === ORDER_STATUS.PENDING) { ... }
+useQuery({ queryKey: [QUERY_KEYS.getMyPages, page] })
+if (page.status === PAGE_STATUS.EXPIRED) { ... }
 Cookies.get(COOKIES_KEY.accessToken)
 ```
 
@@ -61,7 +61,7 @@ Cookies.get(COOKIES_KEY.accessToken)
 ## 5. Every logic change must have a log file in `docs/`
 
 - For every new or changed piece of logic (feature, hook, API call, business rule, bug fix), write a Markdown log file in `docs/` so the team can understand it.
-- Path: `docs/<feature>/<YYYY-MM-DD>-<short-slug>.md` (e.g. `docs/blog/2026-09-30-blocknote-editor.md`). Create the `<feature>` folder if missing.
+- Path: `docs/<feature>/<YYYY-MM-DD>-<short-slug>.md` (e.g. `docs/studio/2026-10-29-chat-preview.md`). Create the `<feature>` folder if missing.
 - Write the log in Vietnamese, short and clear, using this template:
 
 ```md
@@ -106,110 +106,108 @@ Before reporting a task as done, verify:
 
 ## Overview
 
-Next.js client for **"Giặt Ủi Siêu Sạch"** — a laundry service website (deployed on Vercel: `giatuisieusach.vercel.app`).
+Next.js client for an **AI wedding-invitation & profile builder** (brand/domain not decided yet — `site.name` in the translation files; product plan in `design.md`).
 
-- **Public site**: home, pricing, booking (guest or logged-in), track order, blog, reviews/comments, about, contact.
-- **Customer area** (`/profile`): profile info, password, address book, my orders (cancel while `PENDING`), loyalty tier/points.
-- **Admin** (`/admin`): orders, customers, pricing, blog (BlockNote editor), comments, contact messages. Client-only, `force-dynamic`, `noindex`.
-- **Floating AI chat**: a multi-agent assistant (prices, FAQ, recommendations, order lookup, booking form) whose tool loop runs **in the browser**.
-- **Push notifications** via Firebase Cloud Messaging.
-- Backend is a separate **NestJS** API at `NEXT_PUBLIC_API_APP`. This repo has no database.
+A chat-first web app: the user describes what they want in plain words, the AI fills a JSON, a theme template renders it as a live preview on the right; when happy the user publishes it as a link (with an expiry) to share. Only accounts issued by the admin or registered with an invite code can use it.
+
+- **Core principle — template + JSON**: the AI never writes free HTML. It extracts info from the chat into JSON matching a schema (`WeddingData` in `types/index.ts`); the template (`components/Invitation`) renders that JSON. Editing by chat = the AI patches part of the JSON. Manual edits go through the same JSON (studio form).
+- **Products** (phases from `design.md`): wedding invitation (phase 1–2, building now) → profile page (phase 4, reuses the 7 themes) → Excel data dashboard (phase 5).
+- **7 themes**: classic, chinese, tech, future, cute, western, rustic. A theme is only a token set (colors, fonts, SVG ornament, effects) in `constants/themes.ts`; the section layout is shared. Fonts come from Google Fonts with a Vietnamese subset (`GOOGLE_FONTS_URL`). Mobile first, must export cleanly to PDF/PNG.
+- **Billing**: prepaid wallet (top up 20k/50k/80k/100k or custom ≥ 20k via VietQR/PayOS, no free credit). Each message costs `inputTokens × inputPrice + outputTokens × outputPrice` (per 1,000 tokens) of the selected model. The chat always shows session cost, tokens and wallet balance; not enough balance → chat locked with a "Top up" button. Server is the source of truth for every amount.
+- **Links**: `<domain>/thiep/<slug>`, slug assigned by the admin. Lifetime 3 / 7 / 10 (default) / 30 days; unlimited only for profile/dashboard. Warn if it expires before the wedding. Expired → "Thiệp đã hết hạn" page, data kept 15 more days then deleted (Cloudinary images included). Extending is always paid.
+- **Admin**: accounts (create/lock, quota = max pages + max link duration, assign links), AI models (local Ollama/vLLM or cloud OpenRouter, selling prices, default, cloud fallback), usage & profit per model/user/day, abuse reports, invite codes & commission withdrawals.
+- Backend is a separate **NestJS** API at `NEXT_PUBLIC_API_APP` (PostgreSQL/Prisma, Redis/BullMQ, Playwright exports, PayOS). This repo has no database.
+
+## Current state
+
+- **UI is complete but runs on mock data** (`mock/index.ts`). No page calls the API yet: login stores `MOCK_USER` (admin role), the studio fakes AI replies (`MOCK_AI_REPLY`), top-up/publish/export are simulated with timeouts. Replace each mock with a React Query hook (`QUERY_KEYS` already listed) when the endpoint exists.
+- `components/QrCode` is a placeholder (no QR library installed yet).
 
 ## Tech Stack
 
-- **Next.js 16** (App Router) + **React 19** + **TypeScript** — see the warning at the top; read `node_modules/next/dist/docs/` first. Route `params` are `Promise`s (`await params`).
+- **Next.js 16** (App Router) + **React 19** + **TypeScript** — see the warning at the top; read `node_modules/next/dist/docs/` first. Route `params` are `Promise`s (`await params`), page props use the global `PageProps<'/route'>` helper. Turbopack is the default bundler.
+- **daisyUI 5** is the component library — use its classes (`btn`, `card`, `modal`, `drawer`, `menu`, `dropdown`, `tabs`, `table`, `stats`, `steps`, `chat`, `mockup-phone`, `mockup-browser`, `fieldset`, `input`, `toggle`, `alert`, `toast`, `badge`, `collapse`, `countdown`, `list`…) instead of hand-written components (https://daisyui.com). Custom app theme `thiep` in `app/globals.css`.
+- **TailwindCSS v4** (CSS-first: `@plugin`/`@theme` in `app/globals.css`, no `tailwind.config`). Merge classes with `cn()` from `utils/tailwind.ts`. Container queries (`@container`, `@md:`) make the invitation adapt to the preview frame.
 - **TanStack Query v5** for server state, **Zustand v5** (`persist` + `devtools`) for client state.
-- **TailwindCSS v4** (CSS-first: `@theme` in `app/globals.css`, no `tailwind.config`) + **daisyUI 5** (custom theme `giat-say-sieu-sach`). Merge classes with `cn()` from `utils/tailwind.ts`.
-- **BlockNote** (+ Mantine, only for the editor) for blog content; `@blocknote/server-util` renders it in Server Components.
-- **Firebase** (messaging), **dayjs**, **libphonenumber-js**, **react-markdown** + `remark-gfm` (chat), **react-easy-crop** (avatar).
-- Images uploaded to **Cloudinary** (`res.cloudinary.com` allowed in `next.config.ts`).
+- **dayjs**, **react-markdown** + `remark-gfm` (AI chat bubbles).
+- Images on **Cloudinary**, always displayed with `f_auto,q_auto` (`config/cloudinary.ts`); `res.cloudinary.com` allowed in `next.config.ts`.
 - Lint/format: ESLint 9 + Prettier. Package lock: `yarn.lock`.
 
 ## Project Structure
 
 ```
-app/                       # App Router routes (page.tsx + layout.tsx per route)
-  <route>/components/      # components used only by that route
-  admin/                   # admin dashboard (AdminShell.tsx = client shell)
-  api/auth-proxy/[...path] # proxies backend calls with the httpOnly token cookies (+ refresh on 401)
-  api/chat-agent/[...path] # proxies LLM chat/completions; hides AGENT_API_KEY; origin allowlist, 1MB cap
-  api/systemone/           # proxies SYSTEM_ONE_API_URL; origin allowlist
-  firebase-messaging-sw.js/route.ts  # serves the FCM service worker built from config/firebase
-  login/actions.ts, register/actions.ts  # server actions (set token cookies)
-agents/                    # client-side AI chat
-  index.ts                 # chatAgent.chat(): router LLM call -> picks agent -> runAgent()
-  runAgent.ts              # tool loop (MAX_TOOL_ROUNDS = 6)
-  llm.ts                   # OpenAI-compatible request to /api/chat-agent
-  base.ts                  # shared types, toConversation() (last 10 messages)
-  agents/                  # agent definitions + registry (faq, price, recommend, fallback, router)
-  tools/                   # tools executed on the client (price, order, booking, faq, search, ...)
-components/                # shared UI — My* primitives (MyButton, MyInput, MyModal, MyTable, ...),
-                           #   Icons/, Chat/, Blog/, Comment/, Header/, Footer/, ...
-config/                    # baseApi.ts (BaseAPI class), firebase.ts, images.ts, seo.ts (metadata + JSON-LD)
-constants/                 # app.ts, cookies.ts, reactQuery.ts, tools.ts
-hooks/
-  reactQuery/              # useQuery/useMutation hooks for public & customer data
-  admin/                   # admin data hooks (useAdminOrders, useAdminBlog, ...)
-  useLanguage, useModalDrawer, useUser, useChat, useNotifications, ...
-services/                  # one API client per backend resource (+ type.ts for larger ones)
-utils/                     # cookie.ts ('use server'), toast, phone, date, loyalty, orderPricing, slugify, ...
-zustand/                   # stores: user, language, modal, drawer, toast, chat, address
-public/assets/language/    # vn.json, en.json
-docs/<feature>/            # change logs (rule 5)
-scripts/replace-firebase-env.js  # postbuild: injects env into public FCM SW (if present)
+app/                         # App Router (Vietnamese slugs, all listed in ROUTES — constants/app.ts)
+  layout.tsx                 # root: fonts, metadata, ReactQuery, MyModal, Toast
+  (public)/                  # Header + Footer
+    page.tsx                 # landing: hero, steps, 7 themes, products, pricing, FAQ
+    dang-nhap/ dang-ky/ doi-mat-khau/   # login, register with invite code (?ma=), change password
+  (user)/                    # AppShell USER (login required, noindex)
+    tao-thiep/               # studio: chat / form / theme + live preview + publish
+    trang-cua-toi/           # my pages (edit, extend, QR, download, hide, delete) + chat sessions
+    vi/                      # wallet: top up (VietQR), ledger
+    gioi-thieu/              # invite code, commissions, withdraw (phase 3)
+  admin/                     # AppShell ADMIN: overview, tai-khoan, model-ai, bao-cao, hoa-hong
+  thiep/[slug]/              # public invitation (mock: mau-<theme> = demo, het-han = expired), report abuse
+components/
+  AppShell/                  # daisyUI drawer sidebar + top bar (balance, account menu), auth/role guard
+  Invitation/                # template renderer: shared sections + Ornament (per-theme SVG) + Countdown
+  Studio/                    # ChatPanel, ModelSelect, EditForm, ThemePicker, PreviewPanel, PublishDialog
+  Header/ Footer/ Logo/ PageHeader/ ThemeSwatch/ QrCode/ ConfirmDialog/
+  MyModal/ Toast/ ReactQuery/ Icons/
+config/                      # baseApi.ts (BaseAPI class), images.ts, cloudinary.ts
+constants/                   # app.ts (routes, enums, limits, prices), themes.ts (7 theme tokens), reactQuery.ts, cookies.ts
+hooks/                       # useLanguage, useModal, useUser, useStudio, useCopy
+mock/                        # mock data until the API exists
+services/                    # one API client per backend resource (upload.ts so far)
+types/                       # domain types (User, WeddingData, PageItem, AiModel, ChatMessage, Wallet…)
+utils/                       # format (money/date/message cost), validate (social links), cookie ('use server'), toast, language
+zustand/                     # stores: user, studio, language, modal, toast
+public/assets/language/      # vn.json, en.json
+docs/                        # instruction/ + changelog/ (rule 5)
 ```
 
 ## Architecture & Conventions
 
 ### API layer
 - Each service is a class extending `BaseAPI` (`config/baseApi.ts`) with an endpoint, exported as a singleton:
-  `const OrderService = new OrderApi('laundry-orders'); export default OrderService`.
-- `get` defaults to **no auth**; `post` / `put` / `patch` / `postFormData` default to `isUseAuth: true`. Pass `{ isUseAuth: false }` for public endpoints (e.g. guest order, order lookup).
-- Errors throw `HttpError` (keeps `status`).
-- Backend responses are usually wrapped: `{ data, meta? }` — services unwrap `response.data`.
-- Data fetching in components goes through hooks in `hooks/reactQuery/` or `hooks/admin/`, with keys from `QUERY_KEYS`; mutations invalidate the related keys.
+  `const UploadService = new UploadApi('uploads'); export default UploadService`.
+- `get` defaults to **no auth**; `post` / `put` / `patch` / `postFormData` default to `isUseAuth: true`. Pass `{ isUseAuth: false }` for public endpoints (public page, RSVP, wishes, report).
+- Errors throw `HttpError` (keeps `status`). Backend responses are wrapped `{ data, meta? }` — services unwrap `response.data`.
+- Data fetching in components goes through React Query hooks with keys from `QUERY_KEYS`; mutations invalidate the related keys.
 
 ### Auth
-- Access/refresh tokens live in **httpOnly cookies**, read/written only through the server actions in `utils/cookie.ts` (`COOKIES_KEY`).
-- `BaseAPI.getAuthToken()` decodes the JWT `exp` and refreshes ~5s before expiry; a 401 triggers one refresh + retry. Concurrent refreshes share one promise.
-- Refresh sends the refresh token in the `Authorization` header (not the body).
-- If the refresh token is rejected (401/403) → `user.logout()` + `auth.sessionExpired` toast. Cookies are **not** removed there.
-- Logged-in user state is the persisted Zustand store `zustand/user.ts` (`useUser`); wait for `hasHydrated` before relying on it.
+- Access/refresh tokens live in **httpOnly cookies**, read/written only through the server actions in `utils/cookie.ts` (`COOKIES_KEY`). `BaseAPI` refreshes ~5s before expiry and retries once on 401.
+- Logged-in user state is the persisted Zustand store `zustand/user.ts` (`useUser`, includes `balance`, quota, `mustChangePassword`); wait for `hasHydrated` before relying on it. `AppShell` redirects to login when logged out and non-admins away from `/admin`.
 
-### Blog
-- `services/blogClient.ts` — public reads, cached (`API_CACHE_SECONDS`), used by Server Components (`app/blog`, `revalidate = 60`).
-- `services/blog.ts` — admin CRUD (auth). Don't mix them.
-- Skip API calls during build with `IS_BUILD_PHASE` where needed.
-
-### AI chat agents
-- Only the LLM call leaves the browser (via `/api/chat-agent/chat/completions`); tools run client-side with `AgentContext` (`locale`, `userId`).
-- Add an agent: define it in `agents/agents/`, add its name to `AGENT_NAME` (`constants/tools.ts`), register it in `AGENT_REGISTRY` and `routableAgents()` (`agents/agents/index.ts`), and add it to the `enum` of `routeToAgentTool` (`agents/agents/router.ts`).
-- Add a tool: implement it in `agents/tools/`, name it in `TOOL_NAME`, attach it to the agent(s) that may call it.
-- Model: `NEXT_PUBLIC_AGENT_MODEL` (client) — the proxy forwards it; key/URL stay server-side.
+### Studio (chat + preview)
+- State in `zustand/studio.ts` (`useStudio`): page JSON, messages, selected model, session cost/tokens, preview device.
+- Only the current JSON + a few recent messages are sent to the AI each turn; the AI returns only the changed part of the JSON.
+- Images: drag & drop into chat/form → upload to Cloudinary → URL saved in the JSON (`coverImage`, `album`). Max `MAX_IMAGES_PER_PAGE` per page, `MAX_IMAGE_SIZE_MB` each.
+- Social links: `https` only, each field only its own domain (`SOCIAL_DOMAINS`, `utils/validate.ts`); `website` is free but moderated.
 
 ### UI
-- Reuse `components/My*` primitives; open modals/drawers only with `useModalDrawer` (skill `modal-drawer`).
-- SEO: metadata helpers and JSON-LD builders in `config/seo.ts`, rendered with `components/SeoJsonLd`. Admin pages are `noindex`.
-- Mobile-first responsive layouts with Tailwind/daisyUI classes and theme colors (`primary`, `secondary`, `accent`, `background`, `card`, `border`, `text`, `footer`).
+- Prefer daisyUI classes over custom components; only wrap when the same markup repeats many times.
+- Open modals with `useModal().open({ title, children })` (`components/MyModal` = daisyUI `modal`, bottom sheet on mobile). Confirmations use `components/ConfirmDialog`.
+- Invitation styling uses the `.inv-*` classes + `--inv-*` CSS variables from `themeCssVars()`; never hardcode theme colors in components.
+- Mobile-first responsive layouts.
 
 ### Gotchas
-- `PAGE_SIZE` exists twice: `constants/reactQuery.ts` (20) and `constants/app.ts` (10). Check which one the surrounding code uses.
-- `ALLOWED_ORIGINS` is duplicated in `app/api/chat-agent` and `app/api/systemone` — update both when the domain changes.
+- `page.tsx` files may only export the page (and Next config like `metadata`) — put shared maps/helpers in components or constants.
+- `useSearchParams` must sit under a `<Suspense>` boundary (see `app/(public)/dang-ky`).
 - `next.config.ts` removes `console.*` in production and only enables `reactStrictMode` in production.
-- `app/api/auth-proxy` falls back to the onrender backend URL when `NEXT_PUBLIC_API_APP` is unset.
+- Open business questions (prices, extension fee, commission rules, brand/domain) are listed at the end of `design.md`; related constants (`EXTEND_FEE_PER_DAY`, `REFERRAL_DEFAULTS`) are placeholders.
 
 ## Environment
 
-- Variables are typed in `environment.d.ts`; template in `.env.example`. Real values in `.env.local` (git-ignored — never commit it, never print keys).
-- Server-only: `AGENT_API_URL`, `AGENT_API_KEY`, `AGENT_MODEL`, `SYSTEM_ONE_API_URL`, `SYSTEM_ONE_API_KEY`.
-- Public: `NEXT_PUBLIC_API_APP`, `NEXT_PUBLIC_ENV`, `NEXT_PUBLIC_AGENT_MODEL`, `NEXT_PUBLIC_FIREBASE_*`.
+- Variables are typed in `environment.d.ts`. Real values in `.env.local` (git-ignored — never commit it, never print keys).
+- Public: `NEXT_PUBLIC_API_APP`, `NEXT_PUBLIC_ENV`, `NEXT_PUBLIC_BUILD`.
 
 ## Commands
 
 ```bash
 npm run dev        # dev server (http://localhost:3000)
 npm run lint       # eslint
-npm run build      # production build (NEXT_PUBLIC_ENV=production); postbuild runs FCM env script + next-sitemap
+npm run build      # production build (NEXT_PUBLIC_ENV=production); postbuild runs next-sitemap
 npm run start      # serve the production build
 npm run fort-http  # expose localhost:3000 via cloudflared tunnel
 ```

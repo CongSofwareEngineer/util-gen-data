@@ -1,23 +1,47 @@
 @import "tailwindcss";
 @plugin "daisyui" {
-  exclude: calendar;
-  themes: giat-say-sieu-sach --default,
-    giat-say-sieu-sach light;
+  themes: false;
+}
+
+/* App theme (dashboard, studio, admin). Invitation pages use their own tokens: constants/themes.ts */
+@plugin "daisyui/theme" {
+  name: "thiep";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+  --color-base-100: #FFFDFB;
+  --color-base-200: #FAF4F1;
+  --color-base-300: #F0E5E0;
+  --color-base-content: #2B2233;
+  --color-primary: #C2416B;
+  --color-primary-content: #FFFFFF;
+  --color-secondary: #A7834F;
+  --color-secondary-content: #FFFFFF;
+  --color-accent: #6F9C86;
+  --color-accent-content: #FFFFFF;
+  --color-neutral: #2B2233;
+  --color-neutral-content: #F8F1EE;
+  --color-info: #3C8DD9;
+  --color-info-content: #FFFFFF;
+  --color-success: #2E9E6A;
+  --color-success-content: #FFFFFF;
+  --color-warning: #E0A21B;
+  --color-warning-content: #2B2233;
+  --color-error: #D64545;
+  --color-error-content: #FFFFFF;
+  --radius-selector: 1rem;
+  --radius-field: 0.75rem;
+  --radius-box: 1.25rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
 }
 
 @theme {
-  --color-primary: #0A6F87;
-  --color-primary-content: #ffffff;
-  --color-secondary: #007F6A;
-  --color-secondary-content: #ffffff;
-  --color-accent: #FFC857;
-  --color-accent-content: #1F2937;
-  --color-background: #F8FBFD;
-  --color-card: #FFFFFF;
-  --color-border: #E7EEF5;
-  --color-text: #1F2937;
-  --color-footer: #0F172A;
-  --color-bright-cyan: rgb(18, 179, 214);
+  --font-sans: 'Be Vietnam Pro', system-ui, -apple-system, sans-serif;
+  --font-display: 'Playfair Display', serif;
 }
 
 html {
@@ -25,43 +49,21 @@ html {
 }
 
 body {
-  @apply min-h-screen bg-background text-text antialiased;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  @apply min-h-screen bg-base-100 text-base-content antialiased;
 }
 
-/* Scrollbar styling */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 
-::-webkit-scrollbar-track {
-  @apply bg-transparent;
-}
-
 ::-webkit-scrollbar-thumb {
-  @apply bg-gray-300 rounded-full;
+  @apply bg-base-300 rounded-full;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  @apply bg-gray-400;
-}
-
-/* Animation keyframes */
-@keyframes zoom {
+@keyframes fadeUp {
   from {
-    transform: scale(0.95);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-@keyframes slideUp {
-  from {
-    transform: translateY(20px);
+    transform: translateY(16px);
     opacity: 0;
   }
   to {
@@ -70,197 +72,95 @@ body {
   }
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+@utility animation-fade-up {
+  animation: fadeUp 0.5s ease-out both;
 }
 
-@keyframes toastSlideIn {
-  from {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
+/* ── Invitation template ─────────────────────────────────
+   Theme tokens are injected as CSS variables (--inv-*) by components/Invitation */
+.inv {
+  background: var(--inv-bg);
+  color: var(--inv-text);
+  font-family: var(--inv-font-body);
 }
 
-@keyframes toastSlideOut {
-  from {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  to {
-    transform: translateX(100%);
-    opacity: 0;
-  }
+.inv-heading {
+  font-family: var(--inv-font-heading);
+  color: var(--inv-primary);
 }
 
-@utility animation-zoom {
-  animation: zoom 0.2s ease-in-out;
+.inv-names {
+  font-family: var(--inv-font-names);
+  color: var(--inv-primary);
 }
 
-@utility animation-slide-up {
-  animation: slideUp 0.3s ease-out;
+.inv-card {
+  background: var(--inv-surface);
+  border-radius: var(--inv-radius);
+  border: 1px solid color-mix(in srgb, var(--inv-accent) 35%, transparent);
 }
 
-@utility animation-fade-in {
-  animation: fadeIn 0.3s ease-out;
+.inv-muted {
+  color: var(--inv-muted);
 }
 
-@utility animation-toast-in {
-  animation: toastSlideIn 0.3s ease-out;
+.inv-btn {
+  background: var(--inv-primary);
+  color: var(--inv-bg);
+  border-radius: var(--inv-radius);
 }
 
-@utility animation-toast-out {
-  animation: toastSlideOut 0.3s ease-in forwards;
+.inv-field {
+  background: transparent;
+  color: var(--inv-text);
+  border: 1px solid color-mix(in srgb, var(--inv-accent) 50%, transparent);
+  border-radius: var(--inv-radius);
 }
 
-@utility absolute-center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-/* Shadow utilities */
-@utility shadow-card {
-  box-shadow: 0 1px 2px 0 rgb(16 24 40 / 0.04), 0 8px 24px -12px rgb(10 111 135 / 0.12);
-}
-
-@utility shadow-card-hover {
-  box-shadow: 0 2px 4px -2px rgb(16 24 40 / 0.06), 0 24px 48px -16px rgb(10 111 135 / 0.25);
-}
-
-/* Transition utilities */
-@utility transition-default {
-  transition: all 0.2s ease-in-out;
-}
-
-
-/* background */
-@utility bg-linear-default {
-  background: linear-gradient(135deg, rgb(198, 232, 243), rgb(175, 226, 231));
-}
-
-/* Tech panel: faint grid lines (tinted by currentColor) fading out toward the bottom */
-@utility bg-tech-grid {
+/* Tech: grid + blinking caret */
+.inv-tech-grid {
   background-image:
-    linear-gradient(to right, color-mix(in srgb, currentColor 8%, transparent) 1px, transparent 1px),
-    linear-gradient(to bottom, color-mix(in srgb, currentColor 8%, transparent) 1px, transparent 1px);
-  background-size: 32px 32px;
-  mask-image: radial-gradient(ellipse at top, black 30%, transparent 75%);
+    linear-gradient(to right, color-mix(in srgb, var(--inv-primary) 10%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, var(--inv-primary) 10%, transparent) 1px, transparent 1px);
+  background-size: 28px 28px;
 }
 
-/* Popular plan: a light arc keeps running around the card border (ring only, content untouched) */
-@property --glow-angle {
-  syntax: '<angle>';
-  inherits: false;
-  initial-value: 0deg;
-}
-
-@keyframes glowSpin {
-  to {
-    --glow-angle: 360deg;
+@keyframes caret {
+  50% {
+    opacity: 0;
   }
 }
 
-.plan-popular-glow {
-  position: relative;
+.inv-caret::after {
+  content: '_';
+  animation: caret 1s steps(1) infinite;
 }
 
-.plan-popular-glow::before {
-  content: '';
-  position: absolute;
-  inset: -3px;
-  padding: 3px;
-  border-radius: inherit;
-  pointer-events: none;
-  background: conic-gradient(from var(--glow-angle), transparent 0deg, var(--color-accent) 50deg, var(--color-primary) 110deg, transparent 160deg);
-  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor;
-  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
-  mask-composite: exclude;
-  animation: glowSpin 3s linear infinite;
+/* Future: frosted glass + glow */
+.inv-glass {
+  backdrop-filter: blur(14px);
+  box-shadow: 0 0 40px -10px var(--inv-primary);
+}
+
+.inv-glow {
+  text-shadow: 0 0 18px color-mix(in srgb, var(--inv-accent) 70%, transparent);
+}
+
+/* Rustic: kraft paper texture */
+.inv-kraft {
+  background-image: radial-gradient(color-mix(in srgb, var(--inv-primary) 12%, transparent) 1px, transparent 1px);
+  background-size: 6px 6px;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .plan-popular-glow::before {
+  .inv-caret::after {
     animation: none;
   }
 }
 
-/* Main call-to-action: a soft light streak sweeps across the button every few seconds */
-.cta-shine {
-  overflow: hidden;
-}
-
-.cta-shine::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: linear-gradient(110deg, transparent 30%, rgba(255, 255, 255, 0.65) 50%, transparent 70%);
-  transform: translateX(-120%);
-  animation: ctaShine 3.5s ease-in-out infinite;
-}
-
-@keyframes ctaShine {
-  0%,
-  60% {
-    transform: translateX(-120%);
-  }
-  100% {
-    transform: translateX(120%);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .cta-shine::after {
-    animation: none;
-  }
-}
-
-/* reCAPTCHA v3 badge would cover the floating contact buttons; the booking form shows the required notice instead */
-.grecaptcha-badge {
-  visibility: hidden;
-}
-
-/* daisyUI OTP: no daisyUI theme is emitted, so supply the theme vars it relies on (scoped to .otp) */
-.otp {
-  --border: 1px;
-  --depth: 1;
-  --size-field: 0.25rem;
-  --radius-field: 0.5rem;
-  --color-base-100: var(--color-card);
-  --color-base-content: var(--color-text);
-  --color-error: #dc2626;
-  --color-success: #16a34a;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  color: var(--color-text);
-  font-weight: 600;
-}
-
-/* Print only the order invoice (components/OrderInvoice) when it is open */
+/* Exported PDF/PNG: only the invitation */
 @media print {
-  body:has(.print-area) * {
-    visibility: hidden;
-  }
-
-  body:has(.print-area) .print-area,
-  body:has(.print-area) .print-area * {
-    visibility: visible;
-  }
-
-  body:has(.print-area) .print-area {
-    position: absolute;
-    inset: 0 0 auto 0;
-    padding: 24px;
-    background: #fff;
+  .no-print {
+    display: none !important;
   }
 }

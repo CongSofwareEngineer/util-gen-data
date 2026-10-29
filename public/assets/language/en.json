@@ -1,1554 +1,583 @@
 {
+  "site": {
+    "name": "Thiệp AI",
+    "description": "Describe it in plain words, AI builds a beautiful wedding invitation in one of 7 themes — preview instantly and share with one link."
+  },
   "common": {
     "save": "Save",
+    "saved": "Saved",
     "cancel": "Cancel",
-    "delete": "Delete",
-    "edit": "Edit",
-    "add": "Add",
-    "search": "Search",
-    "filter": "Filter",
-    "sort": "Sort",
-    "loading": "Loading...",
-    "noData": "No data",
     "confirm": "Confirm",
     "close": "Close",
-    "back": "Back",
-    "next": "Next",
-    "submit": "Submit",
-    "reset": "Reset",
-    "viewAll": "View All",
-    "viewMore": "View More",
-    "learnMore": "Learn More",
-    "or": "or",
-    "required": "Required",
-    "optional": "Optional",
-    "success": "Success",
-    "error": "Error",
-    "warning": "Warning",
-    "info": "Info",
-    "yes": "Yes",
-    "no": "No",
-    "all": "All",
-    "status": "Status",
-    "date": "Date",
-    "time": "Time",
-    "price": "Price",
-    "total": "Total",
-    "totalPrice": "Total",
-    "phone": "Phone",
-    "email": "Email",
-    "address": "Address",
-    "name": "Name",
-    "note": "Note",
-    "description": "Description",
-    "title": "Title",
-    "content": "Content",
-    "image": "Image",
-    "avatar": "Avatar",
-    "password": "Password",
-    "confirmPassword": "Confirm Password",
-    "rememberMe": "Remember me",
-    "forgotPassword": "Forgot password?",
-    "noAccount": "Don't have an account?",
-    "hasAccount": "Already have an account?",
-    "registerNow": "Register now",
-    "loginNow": "Login now",
-    "orContinueWith": "Or continue with",
-    "page": "Page",
-    "of": "of",
-    "rowsPerPage": "Rows per page",
-    "showing": "Showing",
-    "to": "to",
-    "from": "from",
-    "results": "results",
-    "actions": "Actions",
-    "select": "Select",
-    "notFound": "No results",
-    "refresh": "Refresh",
-    "retry": "Try again",
-    "saving": "Saving...",
-    "selectImage": "Select image",
-    "notFoundPage": {
-      "title": "Page not found",
-      "description": "The page you are looking for does not exist or has been removed. Go back to the home page to continue.",
-      "backHome": "Back to home"
-    },
+    "delete": "Delete",
+    "edit": "Edit",
+    "remove": "Remove",
+    "done": "Done",
+    "copy": "Copy",
     "copied": "Copied",
+    "more": "More",
+    "menu": "Menu",
+    "empty": "No data yet",
+    "qrCode": "QR code",
+    "comingSoon": "Coming soon",
     "errorPage": {
       "title": "Something went wrong",
-      "description": "This page ran into an unexpected problem. Please try again, or come back in a few minutes.",
-      "retry": "Try again",
-      "code": "Error code: {code}"
-    }
-  },
-  "menu": {
-    "home": "Home",
-    "priceList": "Pricing",
-    "blog": "Blog",
-    "about": "About",
-    "reviews": "Reviews",
-    "tracking": "Track Order",
-    "booking": "Book Now",
-    "contact": "Contact",
-    "login": "Login",
-    "register": "Register",
-    "logout": "Logout",
-    "profile": "Profile",
-    "myOrders": "My Orders",
-    "admin": "Admin",
-    "more": "More",
-    "confirmDelete": "Are you sure you want to delete",
-    "confirmDeleteDefault": "Are you sure you want to delete this item?",
-    "passwordRequired": "Please enter your password",
-    "actions": "Actions",
-    "promotions": "Promotions",
-    "policy": "Policies"
-  },
-  "language": {
-    "vi": "Tiếng Việt",
-    "en": "English",
-    "select": "Select language"
-  },
-  "home": {
-    "title": "Super Clean Laundry",
-    "subtitle": "Premium laundry service, doorstep delivery",
-    "hero": {
-      "tag": "Professional laundry service",
-      "title1": "Clean Wash — Crisp Ironing",
-      "title2": "Delivered To Your Door",
-      "description": "We pick up your clothes from home, wash them clean, iron them flat and deliver back on time. 5-star quality at fair prices.",
-      "bookCta": "Book Now",
-      "trackCta": "Track Order",
-      "trust1": "No account needed",
-      "trust2": "Home pickup",
-      "trust3": "On-time delivery",
-      "statsCustomersValue": "10,000+",
-      "statsCustomersLabel": "Happy customers",
-      "statsOrdersValue": "50,000+",
-      "statsOrdersLabel": "Orders completed",
-      "statsRatingValue": "4.9★",
-      "statsRatingLabel": "Average rating",
-      "orderCode": "Order #GS2847",
-      "orderStatus": "Out for delivery",
-      "orderRatingValue": "4.9",
-      "orderRatingLabel": "Rating"
+      "description": "The page hit an unexpected error. Please try again.",
+      "code": "Error code: {code}",
+      "retry": "Try again"
     },
-    "process": {
-      "tag": "Process",
-      "title": "4 Simple Steps",
-      "subtitle": "Just book, we handle the rest",
-      "step1": "Book",
-      "step1Desc": "Pick a suitable date and time, fill in the pickup address",
-      "step2": "Pickup",
-      "step2Desc": "Staff arrive on time and package your clothes carefully",
-      "step3": "Wash & Iron",
-      "step3Desc": "Professional handling, 99.9% bacteria removal",
-      "step4": "Deliver",
-      "step4Desc": "Delivered back on time, clean, fresh and neatly ironed"
-    },
-    "benefits": {
-      "tag": "Benefits",
-      "title": "Why Choose Us?",
-      "pickup": "Doorstep Pickup & Delivery",
-      "pickupDesc": "No need to leave home, we serve you at your door",
-      "ontime": "100% On Time",
-      "ontimeDesc": "Committed to on-time delivery, never late",
-      "clean": "99.9% Germ Free",
-      "cleanDesc": "Modern washing technology with safe detergents",
-      "price": "Transparent Pricing",
-      "priceDesc": "Clear price list, no hidden costs",
-      "track": "Order Tracking",
-      "trackDesc": "Know exactly which step your order is at",
-      "support": "24/7 Support",
-      "supportDesc": "Advice and problem solving at any time"
-    },
-    "pricing": {
-      "tag": "Pricing",
-      "title": "Clear Pricing",
-      "subtitle": "No hidden fees, no surprises",
-      "perKg": "/kg",
-      "bookNow": "Book Now",
-      "popular": "POPULAR",
-      "viewAll": "View Full Price List",
-      "plan1Name": "Regular Wash",
-      "plan1Price": "25,000đ",
-      "plan1Desc": "Regular machine wash, tumble dried",
-      "plan2Name": "Express Wash",
-      "plan2Price": "40,000đ",
-      "plan2Desc": "Wash + dry within 4 hours",
-      "plan3Name": "Dry Cleaning",
-      "plan3Price": "80,000đ",
-      "plan3Desc": "Best for premium items, suits, ao dai",
-      "plan4Name": "Wash + Iron",
-      "plan4Price": "50,000đ",
-      "plan4Desc": "Clean wash, flat ironing, neatly folded"
-    },
-    "commitment": {
-      "title": "Our Commitment",
-      "warranty": "Quality Guarantee",
-      "warrantyDesc": "Not satisfied? We rewash it for free",
-      "privacy": "Data Protection",
-      "privacyDesc": "Your personal information is fully protected",
-      "compensation": "Damage Compensation",
-      "compensationDesc": "Committed to compensation for any damage"
-    },
-    "feedback": {
-      "tag": "Reviews",
-      "title": "What Customers Say?",
-      "item1Comment": "Amazing service! Clothes come out spotless, fresh and on time. I've been using it for 2 years and never disappointed.",
-      "item1Name": "Nguyen Thi Lan",
-      "item1Role": "Loyal customer",
-      "item2Comment": "Booking is so easy, staff arrive on time. My office shirts are ironed perfectly flat, very professional.",
-      "item2Name": "Tran Van Minh",
-      "item2Role": "New customer",
-      "item3Comment": "Fair prices, high quality. The order tracking feature is especially handy — I always know the current step.",
-      "item3Name": "Pham Thu Huong",
-      "item3Role": "Regular customer"
-    },
-    "faq": {
-      "title": "Frequently Asked Questions",
-      "q1": "How long does an order take?",
-      "a1": "Regular orders are processed and returned within 24 hours. With our express service, you get your clothes back in just 4 hours.",
-      "q2": "Do you offer home pickup?",
-      "a2": "Yes. Our staff will come to your home to pick up your clothes and deliver them to the address you request, completely free of charge.",
-      "q3": "What if my clothes get damaged?",
-      "a3": "We guarantee 100% compensation if clothes are damaged due to our fault during the washing process.",
-      "q4": "Do you handle premium garments?",
-      "a4": "Yes. We offer professional dry cleaning for suits, ao dai and other sensitive premium fabrics.",
-      "q5": "How to pay?",
-      "a5": "You can pay in cash on delivery or by bank transfer. We are always transparent about costs."
-    },
-    "cta": {
-      "title": "Ready To Try?",
-      "subtitle": "Book today — we pick up within 2 hours!",
-      "button": "Book For Free"
-    }
-  },
-  "pricing": {
-    "tag": "Pricing",
-    "title": "Clear Pricing — No Hidden Fees",
-    "subtitle": "We are committed to price transparency. You know exactly what you'll pay before you book.",
-    "bookNow": "Book Now",
-    "popular": "⭐ MOST POPULAR",
-    "reviews": "View reviews",
-    "plans": [
-      {
-        "id": "giat-thuong",
-        "name": "Regular Wash",
-        "price": "25,000đ",
-        "unit": "/kg",
-        "description": "Perfect for everyday clothes",
-        "features": ["Standard machine wash", "Fully tumble dried", "Neatly folded", "Delivery in 24–48 hours"]
-      },
-      {
-        "id": "giat-nhanh",
-        "name": "Express Wash",
-        "price": "40,000đ",
-        "unit": "/kg",
-        "description": "Need it fast? Done in 4–6 hours!",
-        "popular": true,
-        "features": ["Priority handling", "Fast drying", "Neatly folded", "Delivery in 4–6 hours", "Real-time notifications"]
-      },
-      {
-        "id": "giat-kho",
-        "name": "Dry Cleaning",
-        "price": "80,000đ",
-        "unit": "/kg",
-        "description": "For suits, blazers, ao dai, premium items",
-        "features": ["Specialized handling", "Premium solvent", "No shrinkage", "Professional ironing", "Protective packaging"]
-      },
-      {
-        "id": "ui",
-        "name": "Ironing",
-        "price": "15,000đ",
-        "unit": "/piece",
-        "description": "Crisp, crease-free professional ironing",
-        "features": ["Professional steam ironing", "No fabric burn", "Perfect creases", "Delivery within 24 hours"]
-      },
-      {
-        "id": "giat-ui",
-        "name": "Wash + Iron",
-        "price": "50,000đ",
-        "unit": "/kg",
-        "description": "Money-saving combo, clean and neatly ironed",
-        "features": ["Standard clean wash", "Fully tumble dried", "Steam ironing", "Neatly folded", "Delivery in 24–36 hours"]
-      }
-    ],
-    "extraTitle": "Additional Services",
-    "extras": [
-      { "name": "Stubborn stain treatment", "price": "20,000đ/spot" },
-      { "name": "Mold treatment", "price": "30,000đ/kg" },
-      { "name": "Blanket & bedsheet washing", "price": "80,000đ/set" },
-      { "name": "Stuffed toy washing", "price": "50,000đ/piece" },
-      { "name": "Leather shoe polishing", "price": "30,000đ/pair" },
-      { "name": "Express delivery (within 2h)", "price": "+ 30,000đ" }
-    ],
-    "note": "* Prices may vary depending on fabric type and level of dirt. Free consultation: 0901 234 567",
-    "washTime": {
-      "title": "Expected washing time",
-      "subtitle": "Counted from pickup. For reference only, it may take longer on peak days.",
-      "items": [
-        { "service": "Regular wash (wash, dry, fold)", "time": "24 – 48 hours" },
-        { "service": "Express wash", "time": "4 – 6 hours" },
-        { "service": "Wash + Iron", "time": "24 – 36 hours" },
-        { "service": "Ironing", "time": "24 hours" },
-        { "service": "Dry clean (suits, áo dài)", "time": "2 – 3 days" },
-        { "service": "Blankets, curtains, plush toys", "time": "2 – 3 days" }
-      ]
-    }
-  },
-  "booking": {
-    "serviceTypeLabel": "Booked via booking page: {serviceType}",
-    "error": "Booking failed, please try again later",
-    "tooManyOrders": "This phone number already has {max} unfinished orders, or you are booking too fast. Please try again in a few minutes or call {phone}.",
-    "title": "Book Laundry Service",
-    "subtitle": "Fill in your information to schedule pickup",
-    "form": {
-      "fullName": "Full Name",
-      "fullNamePlaceholder": "Enter your full name",
-      "phone": "Phone Number",
-      "phonePlaceholder": "Enter phone number",
-      "email": "Email",
-      "emailPlaceholder": "Enter email (optional)",
-      "pickupAddress": "Pickup Address",
-      "pickupAddressPlaceholder": "Enter pickup address",
-      "deliveryAddress": "Delivery Address",
-      "deliveryAddressPlaceholder": "Enter delivery address",
-      "pickupDate": "Pickup Date",
-      "pickupTime": "Pickup Time",
-      "service": "Service",
-      "selectService": "Select service",
-      "weight": "Estimated Weight (kg)",
-      "weightPlaceholder": "Enter estimated weight",
-      "note": "Note",
-      "notePlaceholder": "Enter note (optional)",
-      "submit": "Book Now",
-      "submitting": "Booking..."
-    },
-    "success": {
-      "title": "Booking Successful!",
-      "message": "Thank you for booking. Your order code is:",
-      "track": "Track Order",
-      "backHome": "Back to Home",
-      "copyCode": "Copy order code"
-    },
-    "validation": {
-      "nameRequired": "Please enter your name",
-      "phoneRequired": "Please enter phone number",
-      "phoneInvalid": "Invalid phone number",
-      "pickupAddressRequired": "Please enter pickup address",
-      "deliveryAddressRequired": "Please enter delivery address",
-      "dateRequired": "Please select pickup date",
-      "timeRequired": "Please select pickup time",
-      "serviceRequired": "Please select a service",
-      "weightRequired": "Please enter estimated weight",
-      "weightMin": "Minimum weight is 1kg"
-    },
-    "contactNote": "Contact: {name} - {phone}",
-    "points": {
-      "label": "Use loyalty points for a discount",
-      "balance": "You have {points} points · {step} points = {value} VND",
-      "deductNote": "Points are only deducted when the order is completed; cancelling keeps them.",
-      "needWeight": "Enter an estimated weight to use points."
-    },
-    "pricing": {
-      "subtotal": "Subtotal",
-      "weightDiscount": "Order over {kg}kg discount",
-      "pointsDiscount": "{points} points used",
-      "weightHint": "Book over {kg}kg to get {amount} off"
-    },
-    "pickup": {
-      "today": "Today ({date})",
-      "tomorrow": "Tomorrow ({date})",
-      "slot": "{start}:00 – {end}:00",
-      "time": "{slot}, {date}",
-      "note": "Pickup time: {time}",
-      "returnNote": "Return time: {time}"
-    },
-    "weightNotEstimated": "Customer did not estimate the weight — weigh at pickup and update the order weight."
-  },
-  "reviews": {
-    "order": {
-      "button": "Review",
-      "title": "Review order",
-      "forOrder": "Review for order #{code}",
-      "reviewed": "Reviewed",
-      "alreadyReviewed": "This order has already been reviewed"
-    },
-    "services": {
-      "regular": "Regular Wash",
-      "express": "Express Wash",
-      "dryClean": "Dry Cleaning",
-      "ironing": "Ironing"
-    },
-    "tag": "Reviews",
-    "title": "Service Reviews",
-    "subtitle": "Real experiences shared by our customers",
-    "writeReview": "Write a review",
-    "loginRequired": "Please log in to write a review",
-    "allServices": "All services",
-    "service": "Service",
-    "empty": "No reviews yet. Be the first to share your experience!",
-    "success": "Review submitted successfully! Thank you.",
-    "error": "Something went wrong, please try again later",
-    "summary": {
-      "count": "{count} reviews",
-      "replyCount": "{count} replies"
-    },
-    "shopReply": "Store reply",
-    "deleteTitle": "Delete review",
-    "deleteConfirm": "Are you sure you want to delete this review?",
-    "form": {
-      "heading": "Write a review",
-      "edit": "Edit review",
-      "update": "Update review",
-      "reply": "Reply",
-      "replyLabel": "Your reply",
-      "replyPlaceholder": "Enter your reply to this review...",
-      "replySubmit": "Send reply",
-      "name": "Full name",
-      "namePlaceholder": "Enter your full name",
-      "phone": "Phone number",
-      "phonePlaceholder": "Enter your phone number",
-      "service": "Service used",
-      "selectService": "Select a service",
-      "rating": "Star rating",
-      "title": "Title",
-      "titlePlaceholder": "Summarize your experience",
-      "content": "Content",
-      "contentPlaceholder": "Share details about your experience",
-      "images": "Photos",
-      "maxImages": "Up to {max} photos",
-      "contentCounter": "{count}/{max} characters",
-      "submit": "Submit review"
-    },
-    "validation": {
-      "nameRequired": "Please enter your full name",
-      "phoneRequired": "Please enter your phone number",
-      "phoneInvalid": "Invalid phone number",
-      "serviceRequired": "Please select a service",
-      "ratingRequired": "Please select a star rating",
-      "titleRequired": "Please enter a title",
-      "contentRequired": "Please enter content",
-      "contentTooLong": "Content must be at most {max} characters",
-      "replyRequired": "Please enter your reply",
-      "loginToRate": "Please login to rate"
-    }
-  },
-  "tracking": {
-    "title": "Track Order",
-    "subtitle": "Enter your information to track order progress",
-    "form": {
-      "phone": "Phone Number",
-      "phonePlaceholder": "Enter phone number",
-      "orderCode": "Order Code",
-      "orderCodePlaceholder": "Enter order code",
-      "track": "Track Now",
-      "tracking": "Searching...",
-      "requireOne": "Please enter an order code or phone number",
-      "invalidPhone": "Invalid phone number",
-      "hint": "Enter the order code (8 characters, e.g. #XXXXXXXX) or the phone number you booked with to see your recent orders"
-    },
-    "result": {
-      "title": "Order Information",
-      "code": "Order Code",
-      "status": "Status",
-      "progress": "Progress",
-      "eta": "Estimated Delivery Time",
-      "pickupDate": "Pickup Date",
-      "deliveryDate": "Delivery Date",
-      "service": "Service",
-      "weight": "Weight",
-      "totalPrice": "Total",
-      "notFound": "Order not found",
-      "listTitle": "{count} most recent orders",
-      "createdAt": "Created at",
-      "quantity": "{quantity} kg",
-      "price": "{price}đ",
-      "cancelled": "This order has been cancelled",
-      "notFoundPhone": "No orders found for this phone number",
-      "orderCode": "Order code",
-      "current": "Current",
-      "discount": "Discount"
-    },
-    "status": {
-      "PENDING": "Pending",
-      "RECEIVED": "Received",
-      "WASHING": "Washing",
-      "DRYING": "Drying",
-      "READY": "Ready",
-      "COMPLETED": "Completed",
-      "CANCELLED": "Cancelled"
-    },
-    "stepDesc": {
-      "PENDING": "Order received, we will contact you soon for pickup",
-      "RECEIVED": "Clothes picked up and weighed at the store",
-      "WASHING": "Your clothes are being washed",
-      "DRYING": "Drying and pressing",
-      "READY": "Ready to be delivered back",
-      "COMPLETED": "Delivered, thank you for using our service"
-    }
-  },
-  "blog": {
-    "title": "Blog & News",
-    "subtitle": "Laundry tips, clothing care and much more",
-    "all": "All",
-    "categories": ["Tips", "Knowledge", "Care", "Environment"],
-    "readTime": "{minutes} min read",
-    "readMore": "Read More",
-    "noPosts": "No posts yet",
-    "relatedPosts": "Related Posts",
-    "share": "Share",
-    "backToList": "Back to list",
-    "copied": "Link copied!",
-    "notFound": "Post not found",
-    "emptyContent": "Empty content",
-    "posts": [
-      {
-        "category": "Tips",
-        "minutes": 5,
-        "title": "10 Laundry Tips to Wash Clothes Properly and Keep Colors Fading",
-        "excerpt": "Washing clothes seems simple, but without the right know-how your clothes will fade quickly and get damaged. Let's find out the expert secrets.",
-        "slug": "10-meo-giat-quan-ao-dung-cach-de-ben-mau"
-      },
-      {
-        "category": "Knowledge",
-        "minutes": 7,
-        "title": "What Is Dry Cleaning? When Should You Use It?",
-        "excerpt": "Dry cleaning is not washing without water. It's a specialized process for premium fabrics. Find out more!",
-        "slug": "giat-kho-la-gi-khi-nao-nen-dung"
-      },
-      {
-        "category": "Care",
-        "minutes": 6,
-        "title": "How to Properly Care for Suits and Blazers",
-        "excerpt": "Suits are expensive items that need careful maintenance. This article will guide you on how to wash, iron and store suits to keep them like new.",
-        "slug": "cach-bao-quan-ao-vest-va-comple"
-      },
-      {
-        "category": "Tips",
-        "minutes": 4,
-        "title": "5 Signs Your Washing Machine Is About to Break",
-        "excerpt": "Washing machines also show warning signs before fully breaking down. Detecting them early saves you from costly repairs.",
-        "slug": "5-dau-hieu-may-giat-cua-ban-dang-bi-hong"
-      },
-      {
-        "category": "Environment",
-        "minutes": 5,
-        "title": "Water-Saving Laundry: Green Habits for Your Family",
-        "excerpt": "A few small changes in your washing habits can save thousands of liters of water every year. Find out how!",
-        "slug": "giat-giu-tiet-kiem-nuoc-thoi-quen-xanh"
-      },
-      {
-        "category": "Knowledge",
-        "minutes": 8,
-        "title": "Decoding the Washing Symbols on Your Clothes",
-        "excerpt": "Those tiny symbols on clothing labels are actually your guide to protecting your garments. Let's decode them together.",
-        "slug": "giai-ma-cac-ky-hieu-giat-la-tren-quan-ao"
-      }
-    ],
-    "thumbnail": "Thumbnail",
-    "editor": {
-      "placeholder": "Write your blog content...",
-      "addImage": "Add Image",
-      "addVideo": "Add Video (YouTube)",
-      "imageUrl": "Image URL",
-      "videoUrl": "YouTube Video URL",
-      "videoHint": "Supports YouTube links: youtube.com/watch?v=... or youtu.be/..."
-    }
-  },
-  "about": {
-    "tag": "About us",
-    "title": "Our Story",
-    "storyContent": "Founded in 2018, Super Clean Laundry started as a small shop with the goal of bringing high-quality laundry services to the people of Hanoi. After 6 years of growth, we have served more than 10,000 customers with a team of 50+ professional staff.",
-    "stats": [
-      { "value": "10K+", "label": "Customers" },
-      { "value": "50K+", "label": "Orders" },
-      { "value": "6+", "label": "Years of experience" }
-    ],
-    "vision": {
-      "title": "Vision",
-      "content": "To become the No.1 laundry service chain in Vietnam, applying modern technology to bring the best experience to customers."
-    },
-    "mission": {
-      "title": "Mission",
-      "content": "Free your time from laundry, so you can focus on the things that matter more in life."
-    },
-    "values": {
-      "title": "Core Values",
-      "items": [
-        {
-          "title": "Quality",
-          "description": "We never compromise on quality. Every order is handled with the utmost dedication."
-        },
-        {
-          "title": "Dedication",
-          "description": "We serve with our hearts, not just our skills."
-        },
-        {
-          "title": "Team",
-          "description": "50+ professional, friendly and devoted staff members."
-        },
-        {
-          "title": "Trust",
-          "description": "6 years of building trust with customers. More than 10,000 customers trust us."
-        }
-      ]
-    },
-    "team": {
-      "title": "Our Team",
-      "subtitle": "The dedicated people behind every clean shirt",
-      "members": [
-        { "name": "Nguyen Van Hung", "role": "CEO & Founder" },
-        { "name": "Tran Thi Mai", "role": "Operations Manager" },
-        { "name": "Le Van Thanh", "role": "Head of Tech" },
-        { "name": "Pham Thu Ha", "role": "Customer Success" }
-      ]
-    }
-  },
-  "contact": {
-    "title": "Contact",
-    "subtitle": "Get in touch with us",
-    "info": {
-      "title": "Contact Information",
-      "phone": "Phone",
-      "email": "Email",
-      "address": "Address",
-      "facebook": "Facebook",
-      "zalo": "Zalo",
-      "workingHours": "Working Hours",
-      "addressUpdating": "Updating"
-    },
-    "quick": {
-      "title": "Quick contact",
-      "zalo": "Chat on Zalo",
-      "message": "Send SMS",
-      "call": "Call us"
-    },
-    "form": {
-      "title": "Contact Us",
-      "name": "Name",
-      "namePlaceholder": "Enter your name",
-      "email": "Email",
-      "emailPlaceholder": "Enter email",
-      "phone": "Phone",
-      "phonePlaceholder": "Enter phone number",
-      "subject": "Subject",
-      "subjectPlaceholder": "Enter subject",
-      "message": "Message",
-      "messagePlaceholder": "Enter your message",
-      "submit": "Send Message",
-      "submitting": "Sending...",
-      "success": "Message sent successfully!",
-      "error": "An error occurred, please try again later"
-    },
-    "map": {
-      "title": "Our Location"
+    "notFoundPage": {
+      "title": "Page not found",
+      "description": "The link may be wrong or the page no longer exists.",
+      "backHome": "Back to home"
     }
   },
   "auth": {
-    "google": {
-      "button": "Continue with Google",
-      "phoneHint": "First time with Google: enter your phone number so we can take and track your orders.",
-      "passwordHint": "This phone number already has an account. Enter its password to link it with Google.",
-      "passwordRequired": "Please enter the password",
-      "continue": "Continue",
-      "wrongPassword": "Wrong password",
-      "phoneLinked": "This phone number is linked to another Google account",
-      "error": "Could not sign in with Google, please try again"
-    },
-    "sessionExpired": "Your login session has expired. Please login again.",
+    "sessionExpired": "Your session has expired, please log in again.",
+    "name": "Full name",
+    "email": "Email",
+    "phone": "Phone number",
+    "password": "Password",
+    "confirmPassword": "Confirm password",
+    "passwordHint": "At least {min} characters.",
+    "passwordMismatch": "Passwords do not match.",
     "login": {
-      "title": "Login",
-      "subtitle": "Welcome back",
-      "phone": "Phone Number",
-      "phonePlaceholder": "Enter phone number",
-      "password": "Password",
-      "passwordPlaceholder": "Enter password",
-      "rememberMe": "Remember me",
-      "forgotPassword": "Forgot password?",
-      "submit": "Login",
-      "submitting": "Logging in...",
-      "noAccount": "Don't have an account?",
-      "registerNow": "Register now",
-      "error": "Invalid phone number or password"
-    },
-    "forgotPassword": {
-      "title": "Forgot password",
-      "subtitle": "Enter your registered phone number and we will send an OTP to the account's email",
-      "sendCode": "Send OTP",
-      "sentHint": "If account {phone} has an email, a {length}-digit OTP has been sent to it. The code is valid for 10 minutes.",
-      "otpLabel": "OTP code",
-      "otpRequired": "Please enter all {length} OTP digits",
-      "otpInvalid": "The OTP is incorrect or has expired",
-      "submit": "Reset password",
-      "success": "Password reset successfully, please log in",
-      "resend": "Didn't get the code? Resend",
-      "noEmail": "No email on your account? Contact the store for a temporary password:",
-      "contactAdmin": "Please contact the store via Zalo or hotline. We will give you a temporary password so you can log in and set a new one.",
-      "contactZalo": "Message on Zalo",
-      "contactPhone": "Call {phone}",
-      "backToLogin": "Back to login"
+      "title": "Log in",
+      "description": "Only accounts issued by the admin or registered with an invite code can use the app.",
+      "remember": "Remember me",
+      "submit": "Log in",
+      "noAccount": "No account yet?",
+      "registerWithCode": "Register with an invite code"
     },
     "register": {
-      "title": "Register",
-      "subtitle": "Create a new account",
-      "name": "Full Name",
-      "namePlaceholder": "Enter your full name",
-      "phone": "Phone Number",
-      "phonePlaceholder": "Enter phone number",
-      "password": "Password",
-      "passwordPlaceholder": "Enter password",
-      "confirmPassword": "Confirm Password",
-      "confirmPasswordPlaceholder": "Re-enter password",
-      "submit": "Register",
-      "submitting": "Registering...",
-      "hasAccount": "Already have an account?",
-      "loginNow": "Login now",
-      "error": "Registration failed, please try again",
-      "passwordMismatch": "Passwords do not match",
-      "passwordMin": "Password must be at least {min} characters",
-      "otpHint": "We will send an OTP via SMS to verify your phone number",
-      "captchaLabel": "I'm not a robot",
-      "captchaRequired": "Please verify that you are not a robot",
-      "captchaVerified": "Verified",
-      "successTitle": "Registration successful!",
-      "successDesc": "Your account has been created. Welcome to Super Clean Laundry!",
-      "goToLogin": "Go to login"
+      "title": "Register with an invite code",
+      "description": "Enter the invite code you received to create an account.",
+      "inviteCode": "Invite code",
+      "inviteHint": "E.g. LAN2026. No code? Contact the admin on Zalo.",
+      "submit": "Create account",
+      "hasAccount": "Already have an account?"
+    },
+    "changePassword": {
+      "title": "Change password",
+      "description": "Update your login password.",
+      "firstLogin": "This is your first login — please change the password issued by the admin.",
+      "current": "Current password",
+      "new": "New password",
+      "submit": "Change password",
+      "success": "Password changed."
     }
   },
-  "orders": {
-    "invoice": {
-      "button": "Invoice",
-      "title": "Invoice",
-      "code": "Order code",
-      "date": "Date",
-      "status": "Status",
-      "customer": "Customer",
-      "service": "Service",
-      "quantity": "Quantity",
-      "unitPrice": "Unit price",
-      "subtotal": "Amount",
-      "total": "Subtotal",
-      "weightDiscount": "Orders over 10kg discount",
-      "promotion": "Promotion",
-      "promotionWithCode": "Promotion ({code})",
-      "pointsDiscount": "{points} points redeemed",
-      "finalAmount": "Total due",
-      "thanks": "Thank you for choosing our service!",
-      "print": "Print / Save PDF"
-    },
-    "title": "My Orders",
-    "subtitle": "Manage your orders",
-    "empty": "You have no orders yet",
-    "createFirst": "Book Now",
-    "detail": "Details",
-    "track": "Track",
-    "cancel": "Cancel Order",
-    "cancelConfirm": "Are you sure you want to cancel this order?",
-    "list": {
-      "code": "Order Code",
-      "service": "Service",
-      "status": "Status",
-      "price": "Price",
-      "date": "Created Date",
-      "actions": "Actions"
-    }
-  },
-  "profile": {
-    "title": "My Profile",
-    "subtitle": "Manage your personal info and delivery addresses",
-    "menu": {
-      "info": "Personal Info",
-      "addresses": "Address Book",
-      "orders": "My Orders",
-      "referrals": "Refer friends",
-      "password": "Change Password"
-    },
-    "info": {
-      "title": "Personal Information",
-      "fullName": "Full Name",
-      "fullNamePlaceholder": "Enter your full name",
-      "phone": "Phone Number",
-      "phonePlaceholder": "Enter phone number",
-      "email": "Email",
-      "emailPlaceholder": "Enter email",
-      "save": "Save Changes",
-      "saved": "Changes saved!",
-      "emailInvalid": "Invalid email",
-      "emailHint": "Used to receive an OTP when you forget your password"
-    },
-    "loyalty": {
-      "tier": "Membership tier",
-      "points": "points",
-      "tiers": {
-        "SILVER": "Silver",
-        "GOLD": "Gold",
-        "DIAMOND": "Diamond"
-      },
-      "toNextTier": "{points} more points to reach {tier}",
-      "topTier": "You are at the highest tier",
-      "earnRule": "Every 1,000đ of completed orders = 1 point"
-    },
-    "avatar": {
-      "change": "Change Avatar",
-      "uploading": "Uploading...",
-      "maxSize": "Image must not exceed 5MB"
-    },
-    "addresses": {
-      "title": "Address Book",
-      "subtitle": "Manage your delivery addresses",
-      "empty": "You have no addresses yet",
-      "add": "Add New Address",
-      "edit": "Edit Address",
-      "delete": "Delete Address",
-      "deleteConfirm": "Are you sure you want to delete this address?",
-      "setDefault": "Set as default",
-      "default": "Default",
-      "form": {
-        "label": "Address Label",
-        "labelPlaceholder": "e.g. Home, Office",
-        "name": "Recipient Name",
-        "namePlaceholder": "Enter recipient name",
-        "phone": "Phone Number",
-        "phonePlaceholder": "Enter phone number",
-        "detail": "Detailed Address",
-        "detailPlaceholder": "House number, street...",
-        "city": "Province/City",
-        "district": "District",
-        "ward": "Ward",
-        "isDefault": "Set as default address",
-        "submit": "Save Address",
-        "submitting": "Saving..."
-      },
-      "validation": {
-        "labelRequired": "Please enter an address label",
-        "nameRequired": "Please enter recipient name",
-        "phoneRequired": "Please enter phone number",
-        "phoneInvalid": "Invalid phone number",
-        "detailRequired": "Please enter detailed address",
-        "cityRequired": "Please select province/city",
-        "districtRequired": "Please select district",
-        "wardRequired": "Please select ward"
-      },
-      "errors": {
-        "load": "Could not load your address book",
-        "save": "Could not save the address, please try again",
-        "delete": "Could not delete the address, please try again",
-        "setDefault": "Could not set the default address, please try again"
-      }
-    }
+  "nav": {
+    "themes": "Themes",
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "login": "Log in",
+    "register": "Register",
+    "createNow": "Create now",
+    "studio": "Create",
+    "myPages": "My pages",
+    "wallet": "Wallet",
+    "referral": "Referral",
+    "account": "Account",
+    "admin": "Admin",
+    "userArea": "User area",
+    "changePassword": "Change password",
+    "logout": "Log out",
+    "balanceTitle": "Wallet balance"
   },
   "footer": {
-    "about": "Super Clean Laundry",
-    "aboutDesc": "Premium laundry service, doorstep delivery, super fast, on time, high quality.",
-    "quickLinks": "Quick Links",
-    "services": "Services",
-    "contactInfo": "Contact Information",
-    "newsletter": "Newsletter",
-    "newsletterPlaceholder": "Enter your email",
-    "subscribe": "Subscribe",
-    "copyright": "© 2024 Super Clean Laundry. All rights reserved.",
-    "privacy": "Privacy Policy",
-    "terms": "Terms of Service"
+    "product": "Product",
+    "support": "Support",
+    "zalo": "Message the admin on Zalo",
+    "email": "Send an email"
   },
-  "admin": {
-    "dashboard": {
-      "title": "Dashboard",
-      "subtitle": "Business overview",
-      "totalRevenue": "Total Revenue",
-      "totalRevenueValue": "42,580,000đ",
-      "totalRevenueTrend": "+12.5%",
-      "todayOrders": "Today's Orders",
-      "todayOrdersValue": "28",
-      "todayOrdersTrend": "+4",
-      "processingOrders": "Processing",
-      "processingOrdersValue": "12",
-      "completedOrders": "Completed",
-      "completedOrdersValue": "2,847",
-      "completedOrdersTrend": "+8.3%",
-      "totalCustomers": "Total Customers",
-      "totalCustomersValue": "1,243",
-      "totalCustomersTrend": "+23",
-      "revenueChart": "Monthly Revenue (million VND)",
-      "orderRatio": "Order Ratio",
-      "popularServices": "Popular Services",
-      "recentOrders": "Recent Orders",
-      "viewAll": "View All →",
-      "ratio": [
-        { "name": "Completed", "percent": 72 },
-        { "name": "Processing", "percent": 18 },
-        { "name": "Cancelled", "percent": 10 }
-      ],
-      "services": [
-        { "name": "Wash + Iron", "percent": 45 },
-        { "name": "Express Wash", "percent": 30 },
-        { "name": "Regular Wash", "percent": 25 }
-      ],
-      "orders": [
-        { "code": "#GS28471", "customer": "Nguyen Thi Lan", "phone": "0901234567", "service": "Wash + Iron", "total": "225,000đ", "status": "Delivering", "variant": "blue", "date": "15/01/2024" },
-        { "code": "#GS28470", "customer": "Tran Van Minh", "phone": "0902345678", "service": "Express Wash", "total": "160,000đ", "status": "Washing", "variant": "yellow", "date": "15/01/2024" },
-        { "code": "#GS28469", "customer": "Le Thu Huong", "phone": "0903456789", "service": "Dry Cleaning", "total": "320,000đ", "status": "Completed", "variant": "green", "date": "14/01/2024" },
-        { "code": "#GS28468", "customer": "Pham Van Nam", "phone": "0904567890", "service": "Regular Wash", "total": "75,000đ", "status": "Confirmed", "variant": "gray", "date": "14/01/2024" },
-        { "code": "#GS28467", "customer": "Hoang Thi Mai", "phone": "0905678901", "service": "Wash + Iron", "total": "300,000đ", "status": "Completed", "variant": "green", "date": "13/01/2024" }
-      ]
+  "themes": {
+    "classic": { "name": "Classic", "mood": "Ivory and bronze — thin frames, corner flourishes, formal." },
+    "chinese": { "name": "Chinese", "mood": "Vermilion and gold — double happiness, lanterns, symmetry." },
+    "tech": { "name": "Tech", "mood": "Charcoal and neon — grids, circuits, typing effect." },
+    "future": { "name": "Future", "mood": "Purple, cyan, gradients — frosted glass and glow." },
+    "cute": { "name": "Cute", "mood": "Pastel pink and mint — hearts, round corners, soft type." },
+    "western": { "name": "Western", "mood": "White, sage, champagne — garden florals, lots of white space." },
+    "rustic": { "name": "Rustic", "mood": "Beige, wood, green — kraft paper, wildflowers, warm." }
+  },
+  "product": {
+    "WEDDING": { "name": "Wedding invitation", "desc": "An invitation page in 7 themes with RSVP, guestbook, album and countdown." },
+    "PROFILE": { "name": "Personal profile", "desc": "An about-me page with skills, experience and social links." },
+    "DASHBOARD": { "name": "Data dashboard", "desc": "Upload the Excel template, get a revenue chart and filter table page." }
+  },
+  "home": {
+    "hero": {
+      "badge": "AI + 7 ready-made themes",
+      "title": "Tell the AI, get a beautiful online wedding invitation",
+      "subtitle": "Type the couple's names, date and venue the way you'd text a friend. The AI builds the invitation, you preview it side by side and send the link to guests.",
+      "cta": "Start creating",
+      "secondary": "See the themes",
+      "note": "Pay only for what you use — top up from 20,000 VND."
     },
-    "orders": {
-      "title": "Order Management",
-      "list": {
-        "title": "Order List",
-        "code": "Order Code",
-        "customer": "Customer",
-        "phone": "Phone",
-        "address": "Address",
-        "service": "Service",
-        "status": "Status",
-        "price": "Price",
-        "date": "Created Date",
-        "weight": "Weight",
-        "copyCode": "Copy order code",
-        "copyPhone": "Copy phone number",
-        "callPhone": "Call customer"
-      },
-      "detail": "Order Details",
-      "create": "Create Order",
-      "edit": "Edit Order",
-      "delete": "Delete Order",
-      "deleteConfirm": "Are you sure you want to delete this order?",
-      "status": "Status",
-      "updateStatus": "Update Status",
-      "created": "Order created successfully",
-      "updated": "Order updated successfully",
-      "deleted": "Order deleted successfully",
-      "statusUpdated": "Order status updated successfully",
-      "filters": {
-        "all": "All",
-        "pending": "Pending",
-        "processing": "Processing",
-        "completed": "Completed",
-        "cancelled": "Cancelled"
-      },
-      "editWeight": "Edit weight",
-      "weightEditDesc": "Update the actual weight of order #{code}. The price is recalculated automatically.",
-      "weightInvalid": "Weight must be greater than 0",
-      "weightEditError": "Could not update. The order may already be in washing.",
-      "weightUpdated": "Weight updated",
-      "weightLocked": "Weight cannot be edited once washing has started",
-      "newTotal": "New total (estimated)"
+    "steps": {
+      "title": "Just 4 steps",
+      "describe": { "title": "Describe it", "desc": "Share the wedding details like a chat message." },
+      "build": { "title": "AI builds it", "desc": "The AI asks for what's missing and fills the template." },
+      "edit": { "title": "Adjust", "desc": "Type \"make it pink\" or edit the form by hand." },
+      "publish": { "title": "Publish", "desc": "Pick a duration, share the link or QR code." }
     },
-    "customers": {
-      "title": "Customer Management",
-      "list": "Customer List",
-      "detail": "Customer Details",
-      "create": "Add Customer",
-      "edit": "Edit Customer",
-      "delete": "Delete Customer",
-      "deleteConfirm": "Are you sure you want to delete this customer?",
-      "created": "Customer added successfully",
-      "updated": "Customer updated successfully",
-      "deleted": "Customer deleted successfully",
-      "phone": "Phone",
-      "name": "Full Name",
-      "active": "Active",
-      "roleCustomer": "Customer",
-      "roleAdmin": "Admin",
-      "status": "Status",
-      "createdAt": "Created At",
-      "filterByRole": "Filter by role",
-      "resetPassword": {
-        "action": "Reset password",
-        "title": "Reset password",
-        "confirm": "Create a temporary password for \"{name}\"? The old password will stop working.",
-        "submit": "Create temporary password",
-        "done": "Temporary password for \"{name}\":",
-        "copy": "Copy password",
-        "hint": "This password is shown only once. Send it to the customer via Zalo/phone; they will be asked to change it when logging in."
-      }
+    "themes": {
+      "title": "7 themes for the big day",
+      "subtitle": "Each theme has its own colors, fonts and ornaments, made for phones. Click one to see a sample."
     },
-    "blog": {
-      "title": "Blog Management",
-      "list": "Post List",
-      "create": "Add Post",
-      "edit": "Edit Post",
-      "delete": "Delete Post",
-      "deleteConfirm": "Are you sure you want to delete this post?",
-      "created": "Post added successfully",
-      "updated": "Post updated successfully",
-      "deleted": "Post deleted successfully",
-      "published": "Published",
-      "draft": "Draft",
-      "publish": "Publish now"
+    "products": {
+      "title": "More than wedding invitations",
+      "available": "Available"
     },
-    "banner": {
-      "title": "Banner Management",
-      "list": "Banner List",
-      "create": "Add Banner",
-      "edit": "Edit Banner",
-      "delete": "Delete Banner",
-      "deleteConfirm": "Are you sure you want to delete this banner?"
+    "features": {
+      "rsvp": { "title": "RSVP", "desc": "Guests confirm, you know the headcount." },
+      "wishes": { "title": "Guestbook", "desc": "Guests leave wishes right on the page." },
+      "countdown": { "title": "Countdown", "desc": "A live countdown to the ceremony." },
+      "album": { "title": "Photo album", "desc": "Drag and drop, auto-compressed." },
+      "qr": { "title": "QR code", "desc": "Print it on paper cards, scan to open." },
+      "export": { "title": "HTML, PDF, PNG", "desc": "Clean exports with correct Vietnamese." },
+      "expiry": { "title": "Expiring links", "desc": "Links expire, data is deleted afterwards." },
+      "privacy": { "title": "Private", "desc": "Password protection, hidden from Google." }
     },
-    "prices": {
-      "title": "Price Management",
-      "list": "Service List",
-      "create": "Add Service",
-      "edit": "Edit Service",
-      "delete": "Delete Service",
-      "deleteConfirm": "Are you sure you want to delete this service?",
-      "created": "Service added successfully",
-      "updated": "Service updated successfully",
-      "deleted": "Service deleted successfully",
-      "name": "Service Name",
-      "description": "Description",
-      "descriptionPlaceholder": "Brief description of the service",
-      "price": "Unit Price",
-      "unit": "Unit",
-      "unitPlaceholder": "e.g. VND/kg",
-      "active": "Active",
-      "inactive": "Inactive",
-      "popular": "Popular"
+    "pricing": {
+      "title": "Pay as you go",
+      "subtitle": "Each message is charged by the tokens actually used and the price of the model you pick, from your prepaid wallet.",
+      "perMessage": "estimated per message",
+      "input": "Sent tokens: {price} / 1,000 tokens",
+      "output": "AI reply tokens: {price} / 1,000 tokens",
+      "topup": "Top up via VietQR, minimum {min}. No free trial credit."
     },
-    "comments": {
-      "title": "Review Management",
-      "list": "Review List",
-      "delete": "Delete Review",
-      "deleteConfirm": "Are you sure you want to delete this review?",
-      "reply": "Reply to Review",
-      "filterByStatus": "Filter by status",
-      "toggled": "Review status updated successfully",
-      "replied": "Review replied successfully",
-      "updated": "Review updated successfully",
-      "deleted": "Review deleted successfully",
-      "statuses": {
-        "visible": "Visible",
-        "hidden": "Hidden"
-      },
-      "hide": "Hide",
-      "show": "Show",
-      "detail": "Review Details"
+    "faq": {
+      "title": "Frequently asked questions",
+      "account": { "q": "How do I get an account?", "a": "Accounts are issued by the admin, or you register with an invite code from a referrer." },
+      "cost": { "q": "How much does one invitation cost?", "a": "You pay per message and model used. The chat always shows the session cost and your wallet balance." },
+      "expiry": { "q": "How long does the link last?", "a": "Pick 3, 7, 10 or 30 days. Expired links show \"Invitation expired\"; data is kept 15 more days then deleted. You can extend (paid)." },
+      "edit": { "q": "Can I edit after publishing?", "a": "Yes. Open \"My pages\" to keep chatting or edit the form — the link stays the same." },
+      "images": { "q": "How do I upload photos?", "a": "Drag photos into the chat or the form. Up to 30 photos per page, auto-compressed." },
+      "refund": { "q": "What if I run out of balance?", "a": "The chat box locks, the session and preview are kept. Top up and continue." }
     },
-    "contacts": {
-      "title": "Contact Management",
-      "list": "Contact List",
-      "delete": "Delete Contact",
-      "deleteConfirm": "Are you sure you want to delete this contact?",
-      "updated": "Contact updated successfully",
-      "statusUpdated": "Contact status updated successfully",
-      "deleted": "Contact deleted successfully",
-      "filterByStatus": "Filter by status",
-      "statuses": {
-        "PENDING": "Pending",
-        "IN_PROGRESS": "In Progress",
-        "RESOLVED": "Resolved",
-        "CLOSED": "Closed"
-      }
-    },
-    "sidebar": {
-      "dashboard": "Dashboard",
-      "orders": "Orders",
-      "customers": "Customers",
-      "blog": "Blog",
-      "banner": "Banners",
-      "prices": "Prices",
-      "comments": "Reviews",
-      "contacts": "Contacts",
-      "revenue": "Revenue",
-      "logoutAdmin": "Exit Admin",
-      "promotions": "Promotions",
-      "branches": "Branches",
-      "faqs": "FAQs"
-    },
-    "topbar": {
-      "name": "Admin",
-      "role": "Administrator",
-      "backHome": "← Back to home"
-    },
-    "promotions": {
-      "title": "Promotion management",
-      "create": "Add promotion",
-      "edit": "Edit promotion",
-      "delete": "Delete promotion",
-      "created": "Promotion added",
-      "updated": "Promotion updated",
-      "deleted": "Promotion deleted",
-      "name": "Promotion name",
-      "namePlaceholder": "E.g. 20% off your first order",
-      "description": "Description",
-      "descriptionPlaceholder": "Conditions, eligible customers...",
-      "discountPercent": "Discount (%)",
-      "startDate": "Start date",
-      "endDate": "End date",
-      "dateHint": "Leave the start date empty to start now, leave the end date empty for no end date.",
-      "period": "Valid period",
-      "dateInvalid": "The end date must be after the start date",
-      "percentInvalid": "The discount must be between {min} and {max}%",
-      "nameRequired": "Please enter the promotion name",
-      "code": "Promo code",
-      "codePlaceholder": "e.g. SAVE20",
-      "codeHint": "Optional. Leave empty for an announcement-only promotion.",
-      "discount": "Discount",
-      "discountType": "Discount type",
-      "discountTypes": { "PERCENTAGE": "Percentage", "FIXED_AMOUNT": "Fixed amount" },
-      "discountAmount": "Discount (VND)",
-      "amountInvalid": "Discount amount must be greater than 0",
-      "isActive": "Enabled (visible to customers)",
-      "inactive": "Disabled"
-    },
-    "branches": {
-      "title": "Branch management",
-      "create": "Add branch",
-      "edit": "Edit branch",
-      "delete": "Delete branch",
-      "created": "Branch added",
-      "updated": "Branch updated",
-      "deleted": "Branch deleted",
-      "name": "Branch name",
-      "namePlaceholder": "e.g. Tan Binh branch",
-      "phone": "Phone number",
-      "phonePlaceholder": "e.g. 0901234567",
-      "city": "Province/City",
-      "cityPlaceholder": "Select a province/city",
-      "district": "Ward",
-      "districtPlaceholder": "Select a ward",
-      "address": "Street address",
-      "addressPlaceholder": "e.g. 123 Nguyen Hue",
-      "openingHours": "Opening hours",
-      "openingHoursPlaceholder": "e.g. 08:00 - 21:00",
-      "social": {
-        "facebook": "Facebook",
-        "googleMap": "Google Maps",
-        "tiktok": "TikTok",
-        "zalo": "Zalo"
-      },
-      "socialPlaceholder": "https://...",
-      "isActive": "Visible to customers",
-      "active": "Visible",
-      "hidden": "Hidden",
-      "validation": {
-        "nameRequired": "Please enter the branch name",
-        "phoneInvalid": "Phone number must be 10 digits starting with 0",
-        "addressRequired": "Please enter the street address",
-        "cityRequired": "Please select a province/city",
-        "districtRequired": "Please select a ward"
-      }
-    },
-    "faqs": {
-      "title": "FAQ management",
-      "create": "Add question",
-      "edit": "Edit question",
-      "delete": "Delete question",
-      "created": "Question added",
-      "updated": "Question updated",
-      "deleted": "Question deleted",
-      "question": "Question",
-      "questionPlaceholder": "e.g. How long does washing take?",
-      "answer": "Answer",
-      "answerPlaceholder": "Write the answer for customers...",
-      "category": "Category",
-      "tags": "Keywords",
-      "tagsPlaceholder": "Comma separated, e.g. time, delivery",
-      "isActive": "Visible to customers and the AI assistant",
-      "active": "Visible",
-      "hidden": "Hidden",
-      "categories": {
-        "dich-vu": "Services",
-        "gia-ca": "Pricing",
-        "giao-hang": "Pickup & delivery",
-        "khuyen-mai": "Promotions",
-        "khac": "Other"
-      },
-      "validation": {
-        "questionRequired": "Please enter the question",
-        "answerRequired": "Please enter the answer"
-      }
+    "cta": {
+      "title": "Ready for the big day?",
+      "subtitle": "A few messages and your invitation is ready to send to family and friends."
     }
   },
-  "chat": {
-    "title": "Support Chat",
-    "subtitle": "We're ready to help you",
-    "inputPlaceholder": "Type a message...",
-    "send": "Send",
-    "welcome": "Hello! How can we help you?",
-    "autoReply": "Thank you for contacting us! We will respond as soon as possible.",
-    "error": "Sorry, something went wrong. Please try again later.",
-    "offline": "We're currently offline. Please leave a message.",
-    "online": "Online",
-    "pressEnterToSend": "Note: press Enter to send",
-    "clear": "Clear chat",
-    "typing": "Staff is typing...",
-    "sessionExpired": "Session Expired",
-    "sessionExpiredMessage": "Your chat session has been inactive for a while. Would you like to continue or start a new chat?",
-    "continue": "Continue",
-    "startNew": "Start New",
-    "quickOptions": {
-      "title": "How can we help you?",
-      "priceList": "Pricing",
-      "address": "Branches",
-      "promotions": "Promotions",
-      "orderInfo": "Check order",
-      "laundry": "Order laundry",
-      "addressMessage": "Show me the addresses of your branches"
+  "invitation": {
+    "saveTheDate": "Save the date",
+    "title": "You are cordially invited",
+    "groomFamily": "Groom's family",
+    "brideFamily": "Bride's family",
+    "father": "Mr. {name}",
+    "mother": "Mrs. {name}",
+    "events": "Events",
+    "ceremony": "Ceremony",
+    "reception": "Reception",
+    "viewMap": "View map",
+    "album": "Photo album",
+    "albumAlt": "Wedding photo {index}",
+    "coverAlt": "Invitation cover photo",
+    "thanks": "We look forward to celebrating with you!",
+    "musicOn": "Play music",
+    "musicOff": "Stop music",
+    "weekdays": {
+      "0": "Sunday",
+      "1": "Monday",
+      "2": "Tuesday",
+      "3": "Wednesday",
+      "4": "Thursday",
+      "5": "Friday",
+      "6": "Saturday"
     },
-    "serviceTypeLabel": "Booked via chat: {serviceType}",
-    "serviceNotFound": "No matching service found, please try again.",
-    "orderSuccess": "Your order has been placed successfully, we will contact you",
-    "orderConfirmation": "Book laundry service:\n\n• Name: {name}\n• Phone: {phone}\n• Address: {address}\n• Type: {service}\n• Pickup: {pickup}\n• Return: {returnTime}\n• Weight: {weight}\n• Reference price: {price}",
-    "laundryForm": {
-      "title": "Book Laundry Service",
-      "recaptchaNotice": "Protected by Google reCAPTCHA:",
-      "recaptchaPrivacy": "Privacy Policy",
-      "recaptchaTerms": "Terms",
-      "chatAddress": "Chat address",
-      "namePlaceholder": "Enter your name",
-      "phonePlaceholder": "Enter your phone",
-      "addressPlaceholder": "Enter your address",
-      "savedAddress": "Choose a saved address",
-      "city": "Province/City",
-      "ward": "Ward/Commune",
-      "addressDetail": "Street address",
-      "addressDetailPlaceholder": "House number, street...",
-      "serviceType": "Service Type",
-      "weight": "Estimated weight in kg (optional)",
-      "weightPlaceholder": "E.g. 5",
-      "note": "Note for the shop",
-      "notePlaceholder": "E.g. wash whites separately, call before pickup...",
-      "estimatedPrice": "Reference price",
-      "submit": "Book Now",
-      "orderConfirmed": "Thank you for booking! We will contact you soon to confirm.",
-      "serviceOptions": {
-        "clothes": "Regular Clothes",
-        "bedding": "Bedding",
-        "dryClean": "Suit/Dress (Dry Clean)",
-        "express": "Express Wash",
-        "washIron": "Wash + Iron"
-      },
-      "weightHint": "No need to be exact — the shipper weighs it again at pickup.",
-      "weightValue": "{kg} kg",
-      "weightUnknown": "Not estimated (weighed at pickup)",
-      "priceHint": "The final price uses the actual weight measured by the shipper.",
-      "priceAfterWeighing": "Calculated after weighing",
-      "pickupDate": "Pickup date",
-      "pickupTime": "Pickup time",
-      "returnDate": "Return date",
-      "returnTime": "Return time",
-      "returnHint": "The return time only needs to be at least {hours} hour(s) after pickup, same day is fine.",
-      "pickupHint": "We serve daily from {open}:00 to {close}:00. The current slot is preselected — the shipper comes within it (times are estimates).",
-      "washTimeHint": "See the expected washing time of each service on the <link>Price list</link>.",
-      "pickupMoved": "Your pickup slot just passed, so we moved it to the next free slot. Please check it."
+    "countdown": {
+      "title": "Counting down",
+      "days": "Days",
+      "hours": "Hours",
+      "minutes": "Minutes",
+      "seconds": "Seconds"
     },
-    "orderSuccessWithCode": "Booking confirmed! Your order code: **#{code}**\n\nPlease keep this code. Ask \"my orders\" anytime to check the order status.",
-    "orderLookup": {
-      "title": "Look up orders",
-      "submit": "View orders",
-      "invalidPhone": "Invalid phone number"
+    "rsvp": {
+      "title": "RSVP",
+      "description": "Please let us know if you can make it.",
+      "name": "Your name",
+      "yes": "I'll be there",
+      "no": "Sorry, can't make it",
+      "guests": "Number of guests",
+      "guestCount": "{count} guest(s)",
+      "submit": "Send RSVP",
+      "success": "Thank you for your RSVP!"
+    },
+    "wishes": {
+      "title": "Guestbook",
+      "name": "Your name",
+      "message": "Your wishes for the couple",
+      "submit": "Send wishes"
     }
   },
-  "agent": {
-    "order": {
-      "status": {
-        "PENDING": "Pending",
-        "RECEIVED": "Received",
-        "WASHING": "Washing",
-        "DRYING": "Drying",
-        "READY": "Ready",
-        "COMPLETED": "Completed",
-        "CANCELLED": "Cancelled"
-      },
-      "track": {
-        "noCode": "Please provide an order code to track. Order codes have 8 characters, like #XXXXXXXX.",
-        "notFound": "No order found for \"{code}\".",
-        "summary": "Order #{code}: {status}\nService: {services}\nTotal: {price}\nCreated: {date}"
-      },
-      "contact": {
-        "phone": "Phone: {phone}",
-        "email": "Email: {email}",
-        "address": "Address: {address}",
-        "facebook": "Facebook: {facebook}",
-        "zalo": "Zalo: {zalo}",
-        "summary": "Phone: {phone}\nEmail: {email}\nAddress: {address}\nFacebook: {facebook}\nZalo: {zalo}"
-      },
-      "branch": {
-        "noHours": "No hours",
-        "empty": "There are no branches yet.",
-        "map": "Map: {url}"
-      },
-      "myOrders": {
-        "header": "Your {count} most recent orders:",
-        "item": "**Order #{code}**\nStatus: **{status}**\nServices: {services}\nTotal: {price}đ · Created: {date}",
-        "empty": "No orders found. Please check the phone number you booked with.",
-        "invalidPhone": "Invalid phone number."
-      },
-      "cancel": {
-        "requireLogin": "Please log in to cancel an order in chat. If you booked without logging in, please call our hotline for help.",
-        "notFound": "Order #{code} was not found in your account.",
-        "notCancellable": "Order #{code} is \"{status}\" and can no longer be cancelled. Orders can only be cancelled while waiting for confirmation.",
-        "noPending": "You have no orders waiting for confirmation to cancel.",
-        "pickOne": "You have {count} orders waiting for confirmation. Which one do you want to cancel?",
-        "pickItem": "- #{code} · {date} · {price}đ",
-        "cancelled": "Order #{code} has been cancelled."
+  "social": {
+    "facebook": "Facebook",
+    "tiktok": "TikTok",
+    "instagram": "Instagram",
+    "zalo": "Zalo",
+    "linkedin": "LinkedIn",
+    "website": "Website"
+  },
+  "validate": {
+    "invalidUrl": "Invalid link.",
+    "httpsOnly": "Only links starting with https:// are accepted",
+    "wrongDomain": "This link is not on this network's domain."
+  },
+  "studio": {
+    "tabs": { "chat": "Chat with AI", "form": "Edit form", "theme": "Theme" },
+    "mobile": { "edit": "Compose", "preview": "Preview" },
+    "themeHint": "Switch themes anytime, your content stays the same.",
+    "chat": {
+      "sessionCost": "This session:",
+      "tokens": "{count} tokens",
+      "balance": "Balance {amount}",
+      "placeholder": "E.g. Switch to pink, make the invitation more formal…",
+      "hint": "Enter to send, Shift + Enter for a new line. Drop photos here to upload.",
+      "send": "Send",
+      "attach": "Attach photos",
+      "attachment": "Attachment",
+      "replying": "AI is replying",
+      "lowBalance": "Balance running low — top up to avoid interruptions.",
+      "outOfBalance": "Not enough balance for the next message. Your session and preview are kept.",
+      "imageTooLarge": "Each photo can be up to {size} MB.",
+      "tooManyImages": "Up to {max} photos per page."
+    },
+    "model": {
+      "name": "Model",
+      "default": "Default",
+      "estimate": "~{price} / message",
+      "viewPrice": "Prices",
+      "priceTitle": "AI model prices",
+      "inputPrice": "Input / 1,000 tokens",
+      "outputPrice": "Output / 1,000 tokens",
+      "perMessage": "Est. / message",
+      "priceNote": "Estimates are based on average usage. Actual charge = input tokens × input price + output tokens × output price.",
+      "local": "Local AI",
+      "cloud": "Cloud AI",
+      "tier": {
+        "SAVING": "Saver",
+        "STANDARD": "Standard",
+        "PREMIUM": "Premium"
       }
     },
-    "loyalty": {
-      "requireLogin": "Please log in to see your loyalty points and membership tier.",
-      "summary": "Membership tier: **{tier}**\nLoyalty points: **{points} points** (worth {value}đ at booking)",
-      "redeemRule": "Every {step} points gives {amount}đ off at booking."
+    "form": {
+      "groom": "Groom",
+      "bride": "Bride",
+      "name": "Name",
+      "father": "Father's name",
+      "mother": "Mother's name",
+      "general": "General",
+      "weddingDate": "Wedding date & time",
+      "invitation": "Invitation text",
+      "time": "Time",
+      "place": "Venue",
+      "address": "Address",
+      "mapUrl": "Google Maps link",
+      "images": "Photos",
+      "imagesHint": "Click a photo to use it as the cover. Drop new photos into the chat.",
+      "setCover": "Use as cover",
+      "sections": "Visible sections",
+      "showCountdown": "Countdown",
+      "showRsvp": "RSVP",
+      "showWishes": "Guestbook",
+      "social": "Social links",
+      "socialHint": "Only https links on each network's own domain.",
+      "urlPlaceholder": "https://"
     },
-    "address": {
-      "empty": "You have no saved addresses in your profile.",
-      "requireLogin": "Please log in to see your saved addresses.",
-      "item": "{index}. {address} ({phone})"
+    "preview": {
+      "mobile": "Phone preview",
+      "desktop": "Desktop preview"
     },
-    "fallback": {
-      "message": "I could not finish that request. Please try again."
-    },
-    "run": {
-      "toolNotAvailable": "Tool is not available.",
-      "toolError": "Tool error: {message}"
+    "publish": {
+      "button": "Create",
+      "title": "Publish invitation",
+      "link": "Link",
+      "linkNote": "The link is assigned by the admin. Contact the admin to change it.",
+      "duration": "Link duration",
+      "days": "{days} days",
+      "default": "Default",
+      "unlimited": "Unlimited",
+      "unlimitedNote": "\"Unlimited\" is only for profiles and data dashboards.",
+      "expiresBeforeWedding": "The link expires before the wedding ({date}). Pick a longer duration.",
+      "expiresAt": "The link expires on {date}.",
+      "neverExpires": "The link never expires.",
+      "retention": "After expiry the page shows \"Invitation expired\"; data is kept {days} more days then deleted (photos included).",
+      "privacy": "Privacy",
+      "password": "Password-protect the link",
+      "passwordPlaceholder": "Viewing password",
+      "noIndex": "Hide from Google",
+      "submit": "Create link",
+      "success": "Your invitation is live!",
+      "open": "Open invitation"
     }
   },
-  "imageCropper": {
-    "title": "Crop Image",
-    "subtitle": "Drag and zoom the image to select the crop area (square)",
-    "zoom": "Zoom",
-    "confirm": "Crop & Optimize",
-    "processing": "Processing..."
+  "pageStatus": {
+    "ACTIVE": "Live",
+    "HIDDEN": "Hidden",
+    "EXPIRED": "Expired",
+    "LOCKED": "Locked"
   },
-  "notification": {
-    "types": {
-      "ORDER_STATUS": {
-        "PENDING": {
-          "title": "Order #{code} received",
-          "body": "We have received your booking."
-        },
-        "RECEIVED": {
-          "title": "Order #{code} picked up",
-          "body": "Your laundry was picked up and is waiting to be washed."
-        },
-        "WASHING": {
-          "title": "Washing order #{code}",
-          "body": "Your laundry is being washed."
-        },
-        "DRYING": {
-          "title": "Drying order #{code}",
-          "body": "Your laundry is being dried."
-        },
-        "READY": {
-          "title": "Order #{code} is ready",
-          "body": "Your laundry is clean and ready to be delivered."
-        },
-        "COMPLETED": {
-          "title": "Order #{code} completed",
-          "body": "Thank you! Please review your order to help us improve."
-        },
-        "CANCELLED": {
-          "title": "Order #{code} cancelled",
-          "body": "Your order has been cancelled."
-        }
-      }
+  "myPages": {
+    "title": "My pages",
+    "description": "Your published pages and chat sessions.",
+    "create": "New invitation",
+    "quotaReached": "You have used all your pages. Contact the admin to raise your quota.",
+    "empty": "You haven't created any pages yet.",
+    "tabs": { "pages": "Pages", "sessions": "Chat sessions" },
+    "stats": {
+      "pages": "Pages",
+      "quota": "used / quota",
+      "active": "Live",
+      "views": "Views",
+      "rsvp": "RSVPs"
     },
-    "permission": {
-      "granted": "Notifications enabled",
-      "denied": "Notifications blocked",
-      "default": "Notifications not enabled"
+    "views": "{count} views",
+    "rsvp": "{count} RSVPs",
+    "expiresIn": "{days} days left ({date})",
+    "expiredOn": "Expired {date}",
+    "continueEdit": "Continue",
+    "view": "View page",
+    "show": "Show page",
+    "hide": "Hide page",
+    "download": "Download {format}",
+    "downloadQueued": "Exporting {format}, you'll get a download link when it's ready.",
+    "extend": {
+      "button": "Extend",
+      "title": "Extend \"{title}\"",
+      "newExpiry": "New expiry",
+      "fee": "Extension fee",
+      "notEnough": "Not enough balance, please top up.",
+      "submit": "Extend",
+      "success": "Link extended."
     },
-    "requestPermission": {
-      "title": "Enable notifications",
-      "message": "Receive notifications about order status and promotions",
-      "allowButton": "Allow",
-      "denyButton": "Deny",
-      "error": "Notification permission is required to receive notifications"
+    "delete": {
+      "title": "Delete page",
+      "message": "Delete \"{title}\"? The link stops working and all data (photos included) is permanently deleted."
     },
-    "tokenReceived": "Notifications activated",
-    "tokenError": "Could not activate notifications",
-    "title": "Notifications",
-    "markAllRead": "Mark all as read",
-    "empty": "No notifications yet",
-    "emptyDesc": "Order updates and promotions will appear here"
-  },
-  "otp": {
-    "title": "Verify phone number",
-    "subtitle": "Enter the {length}-digit OTP sent to {phone}",
-    "verify": "Verify",
-    "verifying": "Verifying...",
-    "sending": "Sending code...",
-    "resend": "Resend code",
-    "resendIn": "Resend in {seconds}s",
-    "changePhone": "Change phone number",
-    "error": {
-      "invalidPhone": "Invalid phone number",
-      "notSent": "Please send the code first",
-      "invalidCode": "Incorrect OTP, please try again",
-      "expired": "OTP expired, please request a new one",
-      "tooManyRequests": "Too many requests, please try again later",
-      "quotaExceeded": "Service temporarily overloaded, please try again later",
-      "authUnavailable": "Verification service is unavailable",
-      "sendFailed": "Could not send the code, please try again"
+    "sessions": {
+      "title": "Session",
+      "model": "Model",
+      "messages": "Messages",
+      "cost": "Cost",
+      "updatedAt": "Updated",
+      "continue": "Continue chat",
+      "open": "Open",
+      "closed": "Closed"
     }
   },
-  "myOrders": {
-    "title": "My Orders",
-    "subtitle": "Track and manage your laundry orders",
-    "empty": "You have no orders yet",
-    "loadError": "Could not load your orders",
-    "bookNow": "Book now",
-    "track": "Track",
-    "pointsUsed": "{points} points used",
-    "cancel": {
-      "title": "Cancel order",
-      "message": "Are you sure you want to cancel order #{code}?",
-      "note": "Orders can only be cancelled right after booking. Redeemed points will not be deducted.",
-      "keep": "Keep order",
-      "confirm": "Cancel order",
-      "button": "Cancel order",
-      "hint": "You can cancel before we pick up your clothes.",
-      "success": "Order cancelled",
-      "error": "Could not cancel. The order may already be received."
+  "wallet": {
+    "title": "Wallet",
+    "description": "Top up to chat and extend links. Every transaction is recorded below.",
+    "balance": "Balance",
+    "lowBalance": "Balance running low",
+    "noFreeCredit": "A top-up is required to chat — there is no free trial credit.",
+    "topup": "Top up",
+    "topupMore": "Top up",
+    "custom": "Custom",
+    "customLabel": "Amount (minimum {min})",
+    "payWithQr": "Top up {amount} via VietQR",
+    "transferNote": "NAP {code}",
+    "history": "Transaction history",
+    "table": {
+      "time": "Time",
+      "type": "Type",
+      "detail": "Details",
+      "amount": "Amount",
+      "balanceAfter": "Balance after"
+    },
+    "txType": {
+      "TOPUP": "Top-up",
+      "CHAT": "AI chat",
+      "EXTEND": "Link extension",
+      "REFUND": "Refund"
+    },
+    "topupDialog": {
+      "title": "Scan to top up",
+      "amount": "Amount",
+      "note": "Transfer note",
+      "waiting": "Waiting for payment…",
+      "success": "{amount} added to your wallet."
     }
-  },
-  "changePassword": {
-    "title": "Change Password",
-    "subtitle": "The new password needs at least {min} characters",
-    "currentPassword": "Current password",
-    "currentPasswordPlaceholder": "Enter current password",
-    "newPassword": "New password",
-    "newPasswordPlaceholder": "Enter new password",
-    "confirmPassword": "Confirm new password",
-    "confirmPasswordPlaceholder": "Re-enter new password",
-    "submit": "Update password",
-    "success": "Password changed successfully",
-    "show": "Show password",
-    "hide": "Hide password",
-    "errors": {
-      "minLength": "Password must be at least {min} characters",
-      "sameAsCurrent": "The new password must differ from the current one",
-      "currentInvalid": "Current password is incorrect"
-    },
-    "tempPasswordNotice": "You are using a temporary password from the store. Please change it to a new password to keep your account secure."
-  },
-  "promotions": {
-    "seo": {
-      "title": "Laundry promotions",
-      "description": "Current laundry promotions and deals at Giặt Ủi Siêu Sạch. Book now to get the offer!",
-      "keywords": "laundry promotions, laundry deals, laundry discount, giat ui sieu sach"
-    },
-    "tag": "Deals",
-    "title": "Promotions",
-    "subtitle": "Current and upcoming deals at Giặt Ủi Siêu Sạch. Book now so you don't miss out!",
-    "discount": "{percent}% off",
-    "validRange": "{from} – {to}",
-    "validUntil": "Until {date}",
-    "validFrom": "From {date}",
-    "alwaysOn": "No end date",
-    "active": "Running",
-    "upcoming": "Upcoming",
-    "expired": "Ended",
-    "bookNow": "Book now",
-    "empty": "There are no promotions right now. Please check back later!",
-    "note": "Write the promotion name in the \"Note for the shop\" field when booking to get the deal.",
-    "discountAmount": "{amount} off",
-    "code": "Code:"
-  },
-  "policy": {
-    "seo": {
-      "title": "Policies & Terms",
-      "description": "Terms of service, compensation, payment, cancellation and privacy policies of Giặt Ủi Siêu Sạch.",
-      "keywords": "laundry policy, terms of service, compensation policy, privacy"
-    },
-    "tag": "Policies",
-    "title": "Policies & Terms",
-    "subtitle": "Clear rules so you can hand us your laundry with peace of mind.",
-    "updatedAt": "Last updated: 15/10/2026",
-    "toc": "Policy sections",
-    "contact": "Questions about our policies? <link>Contact us</link>",
-    "sections": [
-      {
-        "id": "terms",
-        "title": "Terms of service",
-        "items": [
-          "Please check your pockets and remove cash, documents and valuables before handing over your laundry. We are not responsible for items left inside.",
-          "The final weight and price are based on the actual weight measured at pickup. Prices shown on the website are for reference only.",
-          "Items that may fade, shrink or have no care label will be discussed with you before cleaning.",
-          "The expected washing time of each service is listed on the Price list page and may be longer on peak days."
-        ]
-      },
-      {
-        "id": "compensation",
-        "title": "Compensation policy",
-        "items": [
-          "Please check your laundry and tell us within 24 hours of receiving it if anything is missing, lost or damaged.",
-          "Our fault: we clean it again for free. If it cannot be fixed, we compensate up to 10 times the service fee of that item.",
-          "Compensation does not cover damage caused by fabric quality, accessories (buttons, zippers, rhinestones) or stains and tears that existed before pickup."
-        ]
-      },
-      {
-        "id": "payment",
-        "title": "Payment",
-        "items": [
-          "Pay in cash or by bank transfer when you receive your laundry.",
-          "Discounts (weight discount, loyalty points, promotions) are deducted directly from the amount to pay.",
-          "All fees are announced in advance, with no hidden charges."
-        ]
-      },
-      {
-        "id": "cancellation",
-        "title": "Cancellation and changes",
-        "items": [
-          "Orders waiting for confirmation can be cancelled for free in \"My orders\" or via the hotline.",
-          "Once the shipper has picked up your laundry, the order cannot be cancelled on the website. Please call the hotline for help.",
-          "To change the pickup time, please call the hotline or message us in the chat."
-        ]
-      },
-      {
-        "id": "privacy",
-        "title": "Privacy",
-        "items": [
-          "Your name, phone number and address are only used for pickup, delivery and customer care.",
-          "We never sell or share your personal data with third parties, unless required by law.",
-          "You can ask us to edit or delete your personal data at any time via the hotline or email."
-        ]
-      }
-    ]
   },
   "referral": {
-    "title": "Refer friends",
-    "subtitle": "Share your link and earn {rate}% of every completed order of the people you refer (as points)",
-    "yourLink": "Your referral link",
-    "code": "Referral code: {code}",
-    "copy": "Copy",
-    "share": "Share",
-    "shareFacebook": "Share on Facebook",
-    "shareTitle": "Giat Ui Sieu Sach",
-    "shareText": "Book laundry pickup and delivery in minutes with Giat Ui Sieu Sach!",
-    "loadError": "Could not load referral data",
-    "pointsValue": "{points} points",
+    "title": "Referral & commission",
+    "description": "Share your invite code. When friends top up, you earn a commission.",
+    "yourCode": "Your invite code",
+    "link": "Sign-up link",
+    "steps": {
+      "share": "Share the link",
+      "register": "Friends sign up with your code",
+      "pay": "Friends top up",
+      "withdraw": "Withdraw after the review period"
+    },
     "stats": {
-      "referred": "People referred",
-      "orders": "Orders with commission",
-      "points": "Commission points"
+      "referees": "Invited",
+      "pending": "Pending",
+      "available": "Withdrawable",
+      "paid": "Paid"
     },
-    "rules": {
-      "share": "Send the link to friends. Friends who create an account or book for the first time from it are counted as your referrals.",
-      "commission": "For each of their completed orders you earn {rate}% of the order value (after discounts) as points: 1,000 VND = 1 point.",
-      "newOnly": "Only phone numbers without an existing account count. Referred customers book and earn points as usual."
-    },
-    "referees": {
-      "title": "People you referred",
-      "subtitle": "Customers who created an account from your link",
-      "customer": "Customer",
-      "joinedAt": "Joined",
-      "orders": "Completed orders",
+    "commissions": "Commissions",
+    "table": {
+      "referee": "Referee",
+      "order": "Top-up",
       "commission": "Commission",
-      "empty": "No one has used your link yet. Share it now!"
+      "status": "Status",
+      "date": "Date"
+    },
+    "status": {
+      "PENDING": "Pending",
+      "AVAILABLE": "Withdrawable",
+      "PAID": "Paid"
+    },
+    "withdraw": {
+      "title": "Withdraw request",
+      "note": "Minimum {min}. The admin reviews and transfers within a few business days.",
+      "amount": "Amount",
+      "fullName": "Account holder name",
+      "idNumber": "Citizen ID number",
+      "bankName": "Bank",
+      "bankAccount": "Account number",
+      "taxNote": "Personal income tax may be withheld from commissions as required by law.",
+      "submit": "Send request",
+      "success": "Withdraw request sent."
+    }
+  },
+  "publicPage": {
+    "metaTitle": "Wedding of {groom} & {bride}",
+    "expired": {
+      "title": "Invitation expired",
+      "description": "This link is no longer active. Its data will be deleted in {days} days.",
+      "cta": "Create your own"
+    },
+    "report": {
+      "button": "Report",
+      "title": "Report abuse",
+      "description": "Is this page fake, a scam, or exposing personal data? Let us know.",
+      "placeholder": "Describe the problem",
+      "submit": "Send report",
+      "success": "Thanks, the admin will review it soon."
+    }
+  },
+  "role": {
+    "ADMIN": "Admin",
+    "USER": "User"
+  },
+  "userStatus": {
+    "ACTIVE": "Active",
+    "LOCKED": "Locked"
+  },
+  "modelType": {
+    "LOCAL": "Local",
+    "CLOUD": "Cloud"
+  },
+  "reportStatus": {
+    "OPEN": "Open",
+    "RESOLVED": "Resolved"
+  },
+  "withdrawStatus": {
+    "PENDING": "Pending",
+    "PAID": "Paid",
+    "REJECTED": "Rejected"
+  },
+  "admin": {
+    "badge": "Admin",
+    "nav": {
+      "overview": "Overview",
+      "users": "Accounts",
+      "models": "AI models",
+      "reports": "Abuse reports",
+      "commissions": "Invites & commissions"
+    },
+    "overview": {
+      "title": "Overview",
+      "description": "Usage, AI cost and profit.",
+      "users": "Accounts",
+      "activePages": "Live pages",
+      "revenue": "Revenue",
+      "aiCost": "AI cost",
+      "profit": "Gross profit",
+      "openReports": "Open reports",
+      "daily": "Last 7 days",
+      "byModel": "Profit by model",
+      "messages": "Messages",
+      "margin": "Margin"
+    },
+    "users": {
+      "title": "Accounts",
+      "description": "Create and lock accounts, set quotas and assign links.",
+      "create": "Create account",
+      "edit": "Edit quota & link",
+      "search": "Search by name or email",
+      "user": "User",
+      "role": "Role",
+      "status": "Status",
+      "quota": "Quota",
+      "quotaValue": "{used}/{max} pages · up to {days} days",
+      "createdAt": "Created",
+      "mustChangePassword": "Password not changed",
+      "tempPassword": "Temporary password",
+      "tempPasswordHint": "The user must change it on first login.",
+      "slug": "Assigned link",
+      "slugPlaceholder": "link-name",
+      "maxPages": "Max pages",
+      "maxDuration": "Max duration",
+      "resetPassword": "Reset password",
+      "resetPasswordConfirm": "Reset the password for {name}? A temporary password will be emailed.",
+      "resetPasswordDone": "Password reset.",
+      "lock": "Lock account",
+      "unlock": "Unlock"
+    },
+    "models": {
+      "title": "AI models",
+      "description": "Manage local/cloud models, token selling prices and the default model.",
+      "add": "Add model",
+      "edit": "Edit model",
+      "displayName": "Display name",
+      "type": "Type",
+      "connection": "Connection",
+      "connectionHint": "Ollama/vLLM host or OpenRouter model name.",
+      "tier": "Price tier",
+      "enabled": "Selectable",
+      "fallbackTitle": "Cloud fallback model",
+      "fallbackDescription": "If the local machine stops responding, the system switches to this model, tells the user and charges its price."
+    },
+    "reports": {
+      "title": "Abuse reports",
+      "description": "Handle pages reported as fake, scams or exposing personal data.",
+      "page": "Page",
+      "owner": "Owner: {name}",
+      "reason": "Reason",
+      "date": "Time",
+      "lockPage": "Lock page",
+      "lockConfirm": "Lock \"{title}\"? Visitors will no longer be able to open it.",
+      "locked": "Page locked.",
+      "dismiss": "Dismiss"
     },
     "commissions": {
-      "title": "Commission history",
-      "subtitle": "Points earned from each completed order",
-      "order": "Order",
-      "orderAmount": "Order value",
-      "points": "Points",
-      "empty": "No commission yet"
-    },
-    "register": {
-      "invitedBy": "You are signing up with a referral link (code {code})"
+      "title": "Invites & commissions",
+      "description": "Issue invite codes, review withdraw requests and set commission rules.",
+      "tabs": {
+        "codes": "Invite codes",
+        "withdrawals": "Withdrawals",
+        "settings": "Rules"
+      },
+      "createCode": "Create invite code",
+      "code": "Code",
+      "owner": "Referrer",
+      "used": "Used",
+      "maxUses": "Max uses",
+      "expiresAt": "Expires",
+      "emptyUnlimited": "Leave empty = unlimited",
+      "requester": "Requester",
+      "markPaid": "Mark paid",
+      "reject": "Reject",
+      "rulesPending": "Commission rules are not decided yet — the values below are temporary.",
+      "rate": "Commission rate (%)",
+      "reviewDays": "Review period (days)",
+      "minWithdraw": "Minimum withdrawal (VND)",
+      "firstOrderOnly": "Only the referee's first top-up counts"
     }
   }
 }

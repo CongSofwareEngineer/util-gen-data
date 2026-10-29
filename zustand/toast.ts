@@ -6,7 +6,7 @@ import { IS_PRODUCTION } from '@/constants/app'
 export interface Toast {
   id: number
   message: string
-  type?: 'default' | 'warning' | 'error'
+  type?: 'default' | 'success' | 'warning' | 'error'
   duration?: number
 }
 

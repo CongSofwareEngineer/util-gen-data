@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 
-import MyButton from '@/components/MyButton'
+import { ROUTES } from '@/constants/app'
 import useLanguage from '@/hooks/useLanguage'
 
 type ErrorPageProps = {
@@ -10,22 +10,22 @@ type ErrorPageProps = {
   unstable_retry: () => void
 }
 
-// Runtime error boundary for every route under the root layout (header/footer stay visible)
+// Runtime error boundary for every route under the root layout
 const ErrorPage = ({ error, unstable_retry }: ErrorPageProps) => {
   const { translate } = useLanguage()
 
   return (
-    <div className='px-4 py-20 lg:py-28'>
-      <div className='mx-auto max-w-xl text-center'>
-        <h1 className='text-2xl font-bold text-text lg:text-3xl'>{translate('common.errorPage.title')}</h1>
-        <p className='mt-3 text-base leading-relaxed text-gray-500'>{translate('common.errorPage.description')}</p>
-        {error.digest && <p className='mt-2 text-xs text-gray-400'>{translate('common.errorPage.code', { code: error.digest })}</p>}
-        <div className='mt-8 flex flex-wrap items-center justify-center gap-3'>
-          <MyButton variant='primary' onClick={() => unstable_retry()}>
+    <div className='hero min-h-[60dvh] px-4'>
+      <div className='hero-content max-w-xl flex-col text-center'>
+        <h1 className='text-2xl font-bold lg:text-3xl'>{translate('common.errorPage.title')}</h1>
+        <p className='text-base-content/60'>{translate('common.errorPage.description')}</p>
+        {error.digest && <p className='text-xs text-base-content/40'>{translate('common.errorPage.code', { code: error.digest })}</p>}
+        <div className='mt-4 flex flex-wrap justify-center gap-3'>
+          <button className='btn btn-primary' onClick={() => unstable_retry()}>
             {translate('common.errorPage.retry')}
-          </MyButton>
-          <Link href='/'>
-            <MyButton variant='outline'>{translate('common.notFoundPage.backHome')}</MyButton>
+          </button>
+          <Link href={ROUTES.home} className='btn btn-outline'>
+            {translate('common.notFoundPage.backHome')}
           </Link>
         </div>
       </div>

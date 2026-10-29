@@ -2,8 +2,12 @@
 User-agent: *
 Allow: /
 Disallow: /admin/
-Disallow: /api/
-Disallow: /profile
+Disallow: /tao-thiep
+Disallow: /trang-cua-toi
+Disallow: /vi
+Disallow: /gioi-thieu
+Disallow: /doi-mat-khau
+Disallow: /thiep/
 
 # Host
 Host: https://giatuisieusach.vercel.app

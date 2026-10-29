@@ -1,10 +1,11 @@
+import type { User } from '@/types'
+
 import { create } from 'zustand'
 import { devtools, persist } from 'zustand/middleware'
 import { StorageValue } from 'zustand/middleware'
 
-import { IS_PRODUCTION } from '@/constants/app'
+import { IS_PRODUCTION, USER_ROLE } from '@/constants/app'
 import { COOKIES_KEY, SESSION_ONLY_LOGIN_KEY } from '@/constants/cookies'
-import { User, UserRole } from '@/services/users/type'
 import { removeCookie } from '@/utils/cookie'
 
 type PersistedState = {
@@ -18,21 +19,20 @@ type UserState = PersistedState & {
   hasHydrated: boolean
   login: (user: User, rememberMe?: boolean) => void
   logout: () => void
-  setUser: (user: User) => void
   updateUser: (user: Partial<User>) => void
   setHasHydrated: (hasHydrated: boolean) => void
 }
 
-const initialUser: Partial<User> & { id: string; isAdmin: boolean } = {
+const initialUser: PersistedState['user'] = {
   id: '',
   isAdmin: false,
 }
 
-const normalizeUser = (userData: User): PersistedState['user'] => {
+const normalizeUser = (userData: Partial<User>): PersistedState['user'] => {
   return {
     ...userData,
-    id: userData._id,
-    isAdmin: userData.role === UserRole.ADMIN,
+    id: userData.id ?? '',
+    isAdmin: userData.role === USER_ROLE.ADMIN,
   }
 }
 
@@ -60,23 +60,8 @@ export const user = create<UserState>()(
           set({ user: initialUser, isLogin: false, isRemembered: true })
         },
 
-        setUser: (userData) => {
-          set({ user: normalizeUser(userData), isLogin: !!userData._id })
-        },
-
         updateUser: (userData) => {
-          set((state) => {
-            const merged = { ...state.user, ...userData }
-
-            if (userData._id !== undefined) {
-              merged.id = userData._id
-            }
-            if (userData.role !== undefined) {
-              merged.isAdmin = userData.role === UserRole.ADMIN
-            }
-
-            return { user: merged }
-          })
+          set((state) => ({ user: normalizeUser({ ...state.user, ...userData }) }))
         },
 
         setHasHydrated: (hasHydrated) => {

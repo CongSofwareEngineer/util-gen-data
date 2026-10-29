@@ -1,5 +1,5 @@
 {
-  "name": "giay-say-sieu-sach-client",
+  "name": "util-gen-data",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -7,32 +7,22 @@
     "build": "NEXT_PUBLIC_ENV=production next build",
     "start": "NEXT_PUBLIC_ENV=production next start",
     "lint": "eslint",
-    "postbuild": "node scripts/replace-firebase-env.js && next-sitemap",
+    "postbuild": "next-sitemap",
     "fort-http": "cloudflared tunnel --url http://localhost:3000"
   },
   "dependencies": {
-    "@blocknote/core": "^0.55.0",
-    "@blocknote/mantine": "^0.55.0",
-    "@blocknote/react": "^0.55.0",
-    "@blocknote/server-util": "^0.55.0",
-    "@mantine/core": "^9.6.3",
-    "@mantine/hooks": "^9.6.3",
     "@tanstack/react-query": "^5.101.4",
     "clsx": "^2.1.1",
     "dayjs": "^1.11.21",
-    "firebase": "^12.18.0",
-    "libphonenumber-js": "^1.13.9",
     "next": "16.2.11",
     "next-sitemap": "^4.2.3",
     "query-string": "^9.4.1",
     "react": "19.2.4",
     "react-dom": "19.2.4",
-    "react-easy-crop": "^6.2.2",
     "react-markdown": "^10.1.0",
     "remark-gfm": "^4.0.1",
-    "y-prosemirror": "^1.3.7",
-    "y-protocols": "^1.0.6",
-    "zustand": "^5.0.14"
+    "zustand": "^5.0.14",
+    "tailwind-merge": "^3.3.1"
   },
   "devDependencies": {
     "@eslint/compat": "1.2.8",

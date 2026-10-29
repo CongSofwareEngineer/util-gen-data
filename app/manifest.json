@@ -1,12 +1,12 @@
 {
-  "name": "Giặt Ủi Siêu Sạch",
-  "short_name": "Giặt Ủi Siêu Sạch",
-  "description": "Dịch vụ giặt ủi cao cấp, giao nhận tận nơi, siêu nhanh, đúng hẹn, chất lượng cao. Đặt lịch ngay!",
+  "name": "Thiệp AI",
+  "short_name": "Thiệp AI",
+  "description": "Mô tả bằng lời, AI dựng thiệp cưới đẹp theo 7 chủ đề, xem trước ngay và chia sẻ bằng một đường link.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "background_color": "#F8FBFD",
-  "theme_color": "#0A6F87",
+  "background_color": "#FFFDFB",
+  "theme_color": "#C2416B",
   "lang": "vi",
   "orientation": "portrait",
   "icons": [

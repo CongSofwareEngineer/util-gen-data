@@ -1,23 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://giatuisieusach.vercel.app</loc><lastmod>2026-10-29T09:15:55.269Z</lastmod><changefreq>daily</changefreq><priority>1</priority></url>
-<url><loc>https://giatuisieusach.vercel.app/about</loc><lastmod>2026-10-29T09:15:55.269Z</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://giatuisieusach.vercel.app/blog</loc><lastmod>2026-10-29T09:15:55.269Z</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://giatuisieusach.vercel.app/booking</loc><lastmod>2026-10-29T09:15:55.269Z</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://giatuisieusach.vercel.app/contact</loc><lastmod>2026-10-29T09:15:55.269Z</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://giatuisieusach.vercel.app/policy</loc><lastmod>2026-10-29T09:15:55.269Z</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://giatuisieusach.vercel.app/pricing</loc><lastmod>2026-10-29T09:15:55.269Z</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://giatuisieusach.vercel.app/promotions</loc><lastmod>2026-10-29T09:15:55.269Z</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://giatuisieusach.vercel.app/reviews</loc><lastmod>2026-10-29T09:15:55.269Z</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://giatuisieusach.vercel.app/track-order</loc><lastmod>2026-10-29T09:15:55.269Z</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://giatuisieusach.vercel.app/blog/cach-giat-va-bao-quan-do-len-lua-do-cao-cap</loc><lastmod>2026-10-02T06:10:50.381Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://giatuisieusach.vercel.app/blog/meo-tay-vet-ban-cung-dau-tren-quan-ao</loc><lastmod>2026-10-02T06:11:14.606Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://giatuisieusach.vercel.app/blog/say-quan-ao-dung-cach-khong-co-rut-khong-nhan</loc><lastmod>2026-10-01T06:11:52.282Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://giatuisieusach.vercel.app/blog/10-nguyen-tac-giat-quan-ao-hieu-qua</loc><lastmod>2026-10-01T06:11:52.108Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://giatuisieusach.vercel.app/blog/cach-giat-chan-men-tai-nha-sach-thom-khong-von-cuc</loc><lastmod>2026-10-01T06:11:51.931Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://giatuisieusach.vercel.app/blog/giat-giu-tiet-kiem-nuoc-thoi-quen-xanh</loc><lastmod>2026-10-01T06:08:39.365Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://giatuisieusach.vercel.app/blog/5-dau-hieu-may-giat-cua-ban-dang-bi-hong</loc><lastmod>2026-10-01T06:08:39.306Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://giatuisieusach.vercel.app/blog/cach-bao-quan-ao-vest-va-comple</loc><lastmod>2026-10-01T06:08:39.250Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://giatuisieusach.vercel.app/blog/giat-kho-la-gi-khi-nao-nen-dung</loc><lastmod>2026-10-01T06:08:39.187Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://giatuisieusach.vercel.app/blog/10-meo-giat-quan-ao-dung-cach-de-ben-mau</loc><lastmod>2026-10-01T06:08:38.804Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://giatuisieusach.vercel.app</loc><lastmod>2026-10-29T09:52:54.957Z</lastmod><changefreq>daily</changefreq><priority>1</priority></url>
+<url><loc>https://giatuisieusach.vercel.app/dang-ky</loc><lastmod>2026-10-29T09:52:54.957Z</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
+<url><loc>https://giatuisieusach.vercel.app/dang-nhap</loc><lastmod>2026-10-29T09:52:54.957Z</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
 </urlset>

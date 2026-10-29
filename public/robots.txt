@@ -1,0 +1,12 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /profile
+
+# Host
+Host: https://giatuisieusach.vercel.app
+
+# Sitemaps
+Sitemap: https://giatuisieusach.vercel.app/sitemap.xml

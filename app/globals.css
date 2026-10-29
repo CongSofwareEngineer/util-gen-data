@@ -1,0 +1,266 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  exclude: calendar;
+  themes: giat-say-sieu-sach --default,
+    giat-say-sieu-sach light;
+}
+
+@theme {
+  --color-primary: #0A6F87;
+  --color-primary-content: #ffffff;
+  --color-secondary: #007F6A;
+  --color-secondary-content: #ffffff;
+  --color-accent: #FFC857;
+  --color-accent-content: #1F2937;
+  --color-background: #F8FBFD;
+  --color-card: #FFFFFF;
+  --color-border: #E7EEF5;
+  --color-text: #1F2937;
+  --color-footer: #0F172A;
+  --color-bright-cyan: rgb(18, 179, 214);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply min-h-screen bg-background text-text antialiased;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400;
+}
+
+/* Animation keyframes */
+@keyframes zoom {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes toastSlideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes toastSlideOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@utility animation-zoom {
+  animation: zoom 0.2s ease-in-out;
+}
+
+@utility animation-slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+@utility animation-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@utility animation-toast-in {
+  animation: toastSlideIn 0.3s ease-out;
+}
+
+@utility animation-toast-out {
+  animation: toastSlideOut 0.3s ease-in forwards;
+}
+
+@utility absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Shadow utilities */
+@utility shadow-card {
+  box-shadow: 0 1px 2px 0 rgb(16 24 40 / 0.04), 0 8px 24px -12px rgb(10 111 135 / 0.12);
+}
+
+@utility shadow-card-hover {
+  box-shadow: 0 2px 4px -2px rgb(16 24 40 / 0.06), 0 24px 48px -16px rgb(10 111 135 / 0.25);
+}
+
+/* Transition utilities */
+@utility transition-default {
+  transition: all 0.2s ease-in-out;
+}
+
+
+/* background */
+@utility bg-linear-default {
+  background: linear-gradient(135deg, rgb(198, 232, 243), rgb(175, 226, 231));
+}
+
+/* Tech panel: faint grid lines (tinted by currentColor) fading out toward the bottom */
+@utility bg-tech-grid {
+  background-image:
+    linear-gradient(to right, color-mix(in srgb, currentColor 8%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, currentColor 8%, transparent) 1px, transparent 1px);
+  background-size: 32px 32px;
+  mask-image: radial-gradient(ellipse at top, black 30%, transparent 75%);
+}
+
+/* Popular plan: a light arc keeps running around the card border (ring only, content untouched) */
+@property --glow-angle {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes glowSpin {
+  to {
+    --glow-angle: 360deg;
+  }
+}
+
+.plan-popular-glow {
+  position: relative;
+}
+
+.plan-popular-glow::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  padding: 3px;
+  border-radius: inherit;
+  pointer-events: none;
+  background: conic-gradient(from var(--glow-angle), transparent 0deg, var(--color-accent) 50deg, var(--color-primary) 110deg, transparent 160deg);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  animation: glowSpin 3s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .plan-popular-glow::before {
+    animation: none;
+  }
+}
+
+/* Main call-to-action: a soft light streak sweeps across the button every few seconds */
+.cta-shine {
+  overflow: hidden;
+}
+
+.cta-shine::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(110deg, transparent 30%, rgba(255, 255, 255, 0.65) 50%, transparent 70%);
+  transform: translateX(-120%);
+  animation: ctaShine 3.5s ease-in-out infinite;
+}
+
+@keyframes ctaShine {
+  0%,
+  60% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: translateX(120%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cta-shine::after {
+    animation: none;
+  }
+}
+
+/* reCAPTCHA v3 badge would cover the floating contact buttons; the booking form shows the required notice instead */
+.grecaptcha-badge {
+  visibility: hidden;
+}
+
+/* daisyUI OTP: no daisyUI theme is emitted, so supply the theme vars it relies on (scoped to .otp) */
+.otp {
+  --border: 1px;
+  --depth: 1;
+  --size-field: 0.25rem;
+  --radius-field: 0.5rem;
+  --color-base-100: var(--color-card);
+  --color-base-content: var(--color-text);
+  --color-error: #dc2626;
+  --color-success: #16a34a;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+/* Print only the order invoice (components/OrderInvoice) when it is open */
+@media print {
+  body:has(.print-area) * {
+    visibility: hidden;
+  }
+
+  body:has(.print-area) .print-area,
+  body:has(.print-area) .print-area * {
+    visibility: visible;
+  }
+
+  body:has(.print-area) .print-area {
+    position: absolute;
+    inset: 0 0 auto 0;
+    padding: 24px;
+    background: #fff;
+  }
+}

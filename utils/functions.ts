@@ -1,0 +1,153 @@
+import type { MyBadgeVariant } from '@/components/MyBadge'
+
+import { images } from '@/config/images'
+import { COLORS, ORDER_STATUS, PROMOTION_STATUS } from '@/constants/app'
+
+export const viewExternal = (url: string) => {
+  window.open(url, '_blank')
+}
+
+export const lowerCase = (value?: string) => {
+  return value ? value.toLowerCase() : value
+}
+
+export const upperCase = (value?: string) => {
+  return value ? value.toUpperCase() : value
+}
+
+export const copyToClipboard = async (text: any) => {
+  if (navigator.clipboard && window.isSecureContext) {
+    await navigator.clipboard.writeText(text)
+
+    return
+  }
+
+  const textarea = document.createElement('textarea')
+
+  textarea.value = text
+
+  textarea.style.position = 'fixed'
+  textarea.style.left = '-9999px'
+  textarea.style.top = '0'
+
+  document.body.appendChild(textarea)
+
+  textarea.focus()
+  textarea.select()
+
+  document.execCommand('copy')
+
+  textarea.remove()
+}
+
+export function sanitizeUrl(url: string) {
+  if (!url) return ''
+
+  return url.replace(/([^:]\/)\/+/g, '$1')
+}
+
+export const scrollTop = () => {
+  if (window) {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+}
+
+export const detectImg = (src?: any, maxWidthScale = 0) => {
+  try {
+    if (!src) {
+      return images.icons.avatarDefault
+    }
+
+    if (src?.startsWith('data:image') || src?.startsWith('/images')) {
+      return src
+    }
+
+    if (src?.startsWith('https')) {
+      return src
+    }
+    if (maxWidthScale > 0) {
+      return `https://res.cloudinary.com/tc-store/image/upload/c_scale,w_${maxWidthScale}/v1722158972/${src}`
+    }
+
+    return `https://res.cloudinary.com/tc-store/image/upload/v1722158972/${src}`
+  } catch {
+    return images.icons.avatarDefault
+  }
+}
+
+export const ellipsisText = (text: string, prefixLength = 13, suffixLength = 4): string => {
+  text = text || ''
+
+  return `${text.substr(0, prefixLength)}...${text.substr(text.length - suffixLength, suffixLength)}`
+}
+
+export const getColorStatus = (key: string) => {
+  // switch (key) {
+  //   case FILTER_BILL.Processing:
+  //     return COLORS.red
+  //   case FILTER_BILL.Delivering:
+  //     return COLOR.blue1
+  //   default:
+  //     return COLOR.green1
+  // }
+}
+
+// Badge color of an order status (tracking page, my orders)
+export const getOrderStatusBadgeVariant = (status: ORDER_STATUS): MyBadgeVariant => {
+  switch (status) {
+    case ORDER_STATUS.COMPLETED:
+      return 'success'
+    case ORDER_STATUS.WASHING:
+    case ORDER_STATUS.DRYING:
+    case ORDER_STATUS.READY:
+      return 'warning'
+    case ORDER_STATUS.CANCELLED:
+      return 'error'
+    default:
+      return 'info'
+  }
+}
+
+export const getPromotionStatusBadgeVariant = (status: PROMOTION_STATUS): MyBadgeVariant => {
+  switch (status) {
+    case PROMOTION_STATUS.ACTIVE:
+      return 'success'
+    case PROMOTION_STATUS.UPCOMING:
+      return 'info'
+    default:
+      return 'default'
+  }
+}
+
+// Translated FAQ category, falls back to the raw value for categories outside FAQ_CATEGORY
+export const getFaqCategoryLabel = (category: string | undefined, translate: (key: string) => string): string => {
+  if (!category) return ''
+
+  return translate(`admin.faqs.categories.${category}`) || category
+}
+
+export const getBase64 = (file: File) => {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader()
+
+    reader.readAsDataURL(file)
+    reader.onload = () => {
+      resolve({
+        name: file.name,
+        type: file.type,
+        base64: reader.result,
+      })
+    }
+    reader.onerror = (error) => {
+      reject(error)
+    }
+  })
+}
+
+export const convertPriceToCurrent = (price?: number | string) => {
+  if (price) {
+    return price?.toLocaleString('vi-VN') + 'đ'
+  }
+
+  return null
+}

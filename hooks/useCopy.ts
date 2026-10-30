@@ -1,15 +1,15 @@
 import { useState } from 'react'
 
-import { COPY_FEEDBACK_DURATION } from '@/constants/app'
+import { copyToClipboard } from '@/utils/function'
 
 // Copy text to the clipboard and flag `copied` for a short moment (button feedback)
 const useCopy = () => {
   const [copied, setCopied] = useState(false)
 
-  const copy = async (text: string) => {
-    await navigator.clipboard.writeText(text)
-    setCopied(true)
-    window.setTimeout(() => setCopied(false), COPY_FEEDBACK_DURATION)
+  const copy = async (text: any) => {
+    copyToClipboard(text).then(() => {
+      setCopied(true)
+    })
   }
 
   return { copied, copy }
